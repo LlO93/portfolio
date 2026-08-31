@@ -1,353 +1,457 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>이조은 — 서비스 기획자 포트폴리오</title>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
+<title>이조은 | 서비스·사업 기획 포트폴리오</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.css" rel="stylesheet">
 <style>
-  *{margin:0;padding:0;box-sizing:border-box}
-  :root{--ink:#1d1d1f;--accent:#0066cc;--mist:#f5f5f7;--line:#d9d9de;--ph:#ececf0}
-  html,body{height:100%}
-  body{font-family:"Pretendard Variable",Pretendard,system-ui,sans-serif;color:var(--ink);background:#fff;word-break:keep-all;-webkit-font-smoothing:antialiased;overflow:hidden}
-  .deck{height:100vh;overflow-y:scroll;scroll-snap-type:y mandatory;scroll-behavior:smooth;scrollbar-width:none}
-  .deck::-webkit-scrollbar{display:none}
-  .slide{height:100vh;scroll-snap-align:start;display:flex;flex-direction:column;justify-content:center;padding:8vh 8vw;position:relative;overflow:hidden}
-  .slide.alt{background:var(--mist)}
-  .slide.dark{background:var(--ink)}
-  .slide.dark, .slide.dark h1, .slide.dark h2, .slide.dark p{color:#fff}
-  .slide.dark .eyebrow{color:#2997ff}
+:root{
+  --ink:#1B2027; --ink2:#343A40; --muted:#73828C;
+  --blue:#2F6FED; --blue-d:#1F4FB5; --yellow:#F4C84A; --gold:#B58412;
+  --pale:#EDF4FB; --pale2:#F7F9FB; --line:#E1E8EF; --white:#fff;
+  --sans:Pretendard,'Pretendard Variable',-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Malgun Gothic',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--ink2);background:var(--white);line-height:1.72;font-size:16px;
+  -webkit-font-smoothing:antialiased;word-break:keep-all;letter-spacing:-.005em}
+::selection{background:var(--blue);color:#fff}
+img{max-width:100%;display:block}
+a{color:inherit}
 
-  .eyebrow{font-size:clamp(11px,1vw,14px);font-weight:800;letter-spacing:.24em;color:var(--accent);text-transform:uppercase;margin-bottom:26px}
-  h1{font-size:clamp(34px,5.6vw,78px);font-weight:800;letter-spacing:-.035em;line-height:1.16}
-  h2{font-size:clamp(26px,3.8vw,52px);font-weight:800;letter-spacing:-.025em;line-height:1.24}
-  h3{font-size:clamp(17px,1.7vw,22px);font-weight:800;letter-spacing:-.01em}
-  p{font-size:clamp(15px,1.45vw,20px);font-weight:400;line-height:1.7;max-width:50ch}
-  .lead{font-size:clamp(17px,1.8vw,25px);font-weight:400;line-height:1.6;max-width:24ch}
-  .sub{font-size:clamp(13px,1.2vw,16px);font-weight:600;color:var(--ink);opacity:.62}
+#bar{position:fixed;top:0;left:0;height:2.5px;background:var(--blue);width:0;z-index:80;transition:width .12s linear}
+nav{position:fixed;top:0;left:0;right:0;z-index:70;background:rgba(255,255,255,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav-in{max-width:1120px;margin:0 auto;padding:0 40px;height:58px;display:flex;align-items:center;justify-content:space-between}
+.nav-name{font-weight:800;font-size:15px;letter-spacing:-.01em;text-decoration:none;color:var(--ink)}
+.nav-name em{font-style:normal;color:var(--muted);font-weight:500;font-size:11.5px;letter-spacing:.16em;margin-left:10px}
+.nav-links{display:flex;gap:24px}
+.nav-links a{font-size:13px;color:var(--muted);text-decoration:none;transition:color .18s;font-weight:500}
+.nav-links a:hover,.nav-links a.on{color:var(--blue)}
 
-  /* cover */
-  .cover .name{font-size:clamp(16px,1.6vw,20px);font-weight:800;letter-spacing:-.01em;margin-bottom:6px}
-  .tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:30px}
-  .tag{background:var(--accent);color:#fff;font-size:clamp(12px,1.1vw,15px);font-weight:700;padding:8px 18px;border-radius:980px}
-  .cover .contact{position:absolute;left:8vw;bottom:7vh;font-size:13px;font-weight:600;opacity:.6}
-  .hint{position:absolute;right:8vw;bottom:7vh;font-size:12px;font-weight:700;letter-spacing:.1em;opacity:.5;text-transform:uppercase}
+.wrap{max-width:900px;margin:0 auto;padding:0 40px}
+.wide{max-width:1120px;margin:0 auto;padding:0 40px}
+section{padding:104px 0}
+.alt{background:var(--pale2)}
 
-  /* toc */
-  .toc{display:grid;grid-template-columns:1fr 1fr;gap:14px 48px;margin-top:18px;max-width:1000px}
-  .toc a{display:flex;gap:16px;align-items:baseline;text-decoration:none;color:var(--ink);padding:10px 0;border-bottom:1px solid var(--line)}
-  .toc a:hover{color:var(--accent)}
-  .toc .n{font-size:13px;font-weight:800;color:var(--accent);min-width:26px}
-  .toc .t{font-size:clamp(15px,1.4vw,19px);font-weight:700}
+.chapter{font-size:11.5px;letter-spacing:.26em;color:var(--blue);font-weight:800;margin-bottom:34px;display:flex;align-items:center;gap:16px}
+.chapter::after{content:"";flex:1;height:1px;background:var(--line)}
+h2{font-size:clamp(24px,3.4vw,32px);font-weight:800;letter-spacing:-.03em;line-height:1.34;color:var(--ink)}
+h3{font-size:clamp(19px,2.4vw,22px);font-weight:800;letter-spacing:-.025em;line-height:1.44;color:var(--ink)}
+h4{font-size:16.5px;font-weight:800;letter-spacing:-.02em;color:var(--ink)}
+p{margin-top:14px}
+p:first-child{margin-top:0}
+.lead{font-size:17.5px;color:var(--muted);line-height:1.75}
 
-  /* strengths */
-  .cols{display:grid;grid-template-columns:repeat(3,1fr);gap:46px;margin-top:48px}
-  .cols .c .k{font-size:clamp(18px,1.9vw,24px);font-weight:800;color:var(--accent)}
-  .cols .c .d{font-size:clamp(14px,1.3vw,17px);font-weight:400;line-height:1.6;margin-top:10px}
+/* hero */
+#hero{background:var(--pale);padding:150px 0 92px;border-bottom:1px solid #D8E6F2}
+.eyebrow{font-size:12px;letter-spacing:.24em;font-weight:800;color:var(--blue);margin-bottom:26px}
+#hero h1{font-size:clamp(34px,5.6vw,54px);font-weight:800;line-height:1.26;letter-spacing:-.04em;color:var(--ink)}
+#hero h1 .hl{color:var(--blue)}
+.roles{margin-top:26px;font-size:14px;letter-spacing:.06em;color:var(--muted);font-weight:600}
+#hero .lead{margin-top:18px;max-width:640px}
+.spine{margin-top:34px;display:inline-flex;flex-wrap:wrap;align-items:center;gap:8px;
+  background:#fff;border:1px solid #D8E6F2;border-radius:14px;padding:16px 20px}
+.spine b{font-size:14.5px;font-weight:700;color:var(--ink)}
+.spine i{font-style:normal;color:#B9CBDD;font-weight:700}
+.stats{margin-top:52px;display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#D8E6F2;
+  border:1px solid #D8E6F2;border-radius:16px;overflow:hidden}
+.stat{background:#fff;padding:24px 22px}
+.stat .v{font-size:27px;font-weight:800;color:var(--blue);letter-spacing:-.03em;line-height:1}
+.stat .k{margin-top:10px;font-size:13.5px;color:var(--muted);line-height:1.5}
 
-  /* metrics */
-  .metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:36px;margin-top:38px}
-  .metric .num{font-size:clamp(46px,7vw,104px);font-weight:800;letter-spacing:-.04em;color:var(--accent);line-height:.95}
-  .metric .cap{font-size:clamp(15px,1.5vw,20px);font-weight:800;margin-top:14px}
-  .metric .ds{font-size:clamp(13px,1.2vw,16px);font-weight:400;opacity:.7;margin-top:6px}
+/* timeline */
+.tl{border-top:1.5px solid var(--line)}
+.tl-row{display:grid;grid-template-columns:150px 1fr;gap:28px;padding:26px 0;border-bottom:1px solid var(--line);align-items:start}
+.tl-when{font-size:13.5px;color:var(--muted);font-weight:600;font-variant-numeric:tabular-nums;padding-top:3px}
+.tl-who{font-size:17px;font-weight:800;color:var(--ink);letter-spacing:-.02em}
+.tl-who span{display:inline-block;margin-left:9px;font-size:12.5px;font-weight:600;color:var(--blue);
+  background:var(--pale);border-radius:6px;padding:2px 9px;vertical-align:2px;letter-spacing:0}
+.tl-what{margin-top:8px;font-size:15.5px;color:var(--muted);line-height:1.66}
 
-  /* project */
-  .grid{display:grid;grid-template-columns:1.15fr .85fr;gap:5vw;align-items:center;width:100%}
-  .grid.solo{grid-template-columns:1fr;max-width:900px}
-  ul{list-style:none;margin-top:28px;display:flex;flex-direction:column;gap:18px}
-  ul li{position:relative;padding-left:24px;font-size:clamp(14px,1.4vw,19px);line-height:1.62;font-weight:400}
-  ul li::before{content:"";position:absolute;left:0;top:.7em;width:7px;height:7px;border-radius:50%;background:var(--accent)}
-  ul li b{font-weight:800}
-  .meta{font-size:clamp(13px,1.2vw,16px);font-weight:600;opacity:.62;margin-top:20px}
-  .ph{background:var(--ph);border:1.6px dashed #b6b6be;border-radius:22px;min-height:54vh;display:flex;align-items:center;justify-content:center;text-align:center;color:#6a6a72;font-size:13px;font-weight:700;padding:24px;line-height:1.6}
-  .slide.alt .ph{background:#fff}
-  .insight{margin-top:34px;border-left:4px solid var(--accent);padding-left:20px;font-size:clamp(14px,1.35vw,18px);line-height:1.6;font-weight:400;max-width:46ch}
-  .insight b{font-weight:800;color:var(--accent)}
+/* cards */
+.grid{display:grid;gap:20px}
+.g2{grid-template-columns:1fr 1fr}
+.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:28px 30px}
+.card.pale{background:var(--pale);border-color:#DCE9F5}
+.card .meta{font-size:12.5px;letter-spacing:.06em;color:var(--blue);font-weight:700;margin-bottom:11px}
+.card p{font-size:15.5px;line-height:1.72}
 
-  /* tables-ish */
-  .rows{margin-top:24px;width:100%;max-width:1080px}
-  .row{display:grid;grid-template-columns:200px 1.3fr 2fr;gap:28px;padding:22px 0;border-bottom:1px solid var(--line);align-items:baseline}
-  .row .w{font-size:clamp(13px,1.2vw,16px);font-weight:800;color:var(--accent)}
-  .row .o{font-size:clamp(14px,1.3vw,18px);font-weight:800}
-  .row .x{font-size:clamp(13px,1.25vw,17px);font-weight:400;opacity:.78;line-height:1.5}
-  .row.two{grid-template-columns:1.6fr 1fr}
-  .skill .row{grid-template-columns:230px 1fr}
+/* quote */
+.quote{margin-top:26px;border-left:4px solid var(--yellow);background:#FFFCF3;padding:18px 24px;
+  font-size:16.5px;font-weight:600;line-height:1.62;color:var(--ink);border-radius:0 12px 12px 0}
 
-  /* nav */
-  .counter{position:fixed;top:22px;right:30px;font-size:12px;font-weight:800;letter-spacing:.08em;color:var(--ink);z-index:60;mix-blend-mode:difference;color:#fff}
-  .prog{position:fixed;left:0;bottom:0;height:3px;width:0;background:var(--accent);z-index:60;transition:width .25s ease}
-  .home{position:fixed;top:20px;left:30px;font-size:12px;font-weight:800;letter-spacing:.06em;color:var(--ink);text-decoration:none;z-index:60;mix-blend-mode:difference;color:#fff}
-  @media(max-width:780px){
-    .grid,.toc,.cols,.metrics{grid-template-columns:1fr}
-    .ph{min-height:34vh}
-    .row,.row.two,.skill .row{grid-template-columns:1fr;gap:4px}
-    .slide{padding:9vh 7vw}
-  }
+/* project */
+.proj{padding:56px 0;border-top:1px solid var(--line)}
+.proj:first-of-type{border-top:none;padding-top:8px}
+.pnum{font-size:12.5px;font-weight:800;color:var(--blue);letter-spacing:.14em;margin-bottom:12px}
+.pmeta{margin-top:14px;font-size:13.5px;color:var(--muted);line-height:1.7}
+.pmeta b{color:var(--ink2);font-weight:700}
+.prole{margin-top:8px;display:flex;flex-wrap:wrap;gap:7px}
+.prole span{font-size:12.5px;color:var(--muted);background:var(--pale2);border:1px solid var(--line);
+  border-radius:20px;padding:3px 12px}
+.psub{margin-top:30px;font-size:18px;font-weight:800;letter-spacing:-.025em;color:var(--ink);line-height:1.5}
+
+/* rank */
+.rank{margin-top:22px;display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.rank .r{background:var(--blue);color:#fff;border-radius:10px;padding:10px 14px;font-size:14.5px;font-weight:700;white-space:nowrap}
+.rank .r.low{background:#AFC2D4}
+.rank .gt{color:#B9CBDD;font-weight:800;font-size:15px}
+
+/* list */
+ul.dot{margin-top:18px;list-style:none;display:flex;flex-direction:column;gap:10px}
+ul.dot li{position:relative;padding-left:19px;font-size:15.5px;line-height:1.68}
+ul.dot li::before{content:"";position:absolute;left:2px;top:10px;width:6px;height:6px;border-radius:50%;background:var(--blue)}
+ol.num{margin-top:18px;list-style:none;counter-reset:n;display:flex;flex-direction:column;gap:11px}
+ol.num li{counter-increment:n;position:relative;padding-left:38px;font-size:15.5px;line-height:1.6}
+ol.num li::before{content:counter(n);position:absolute;left:0;top:1px;width:25px;height:25px;border-radius:50%;
+  background:var(--blue);color:#fff;font-size:12.5px;font-weight:700;display:flex;align-items:center;justify-content:center}
+
+/* table */
+.tbl{margin-top:24px;width:100%;border-collapse:collapse;font-size:15.5px}
+.tbl th{text-align:left;font-size:12.5px;letter-spacing:.06em;color:var(--muted);font-weight:800;
+  padding:0 16px 10px;border-bottom:1.5px solid var(--line)}
+.tbl td{padding:14px 16px;border-bottom:1px solid var(--line);line-height:1.6;vertical-align:top}
+.tbl tr:last-child td{border-bottom:none}
+.tbl td.b{font-weight:700;color:var(--ink)}
+
+/* figure */
+figure{margin-top:26px}
+figure img{border:1px solid var(--line);border-radius:14px;box-shadow:0 8px 26px rgba(20,45,80,.07)}
+figcaption{margin-top:11px;font-size:12.5px;color:var(--muted);line-height:1.55}
+
+/* result */
+.result{margin-top:24px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.result div{background:var(--pale);border-radius:14px;padding:20px 22px}
+.result .v{font-size:22px;font-weight:800;color:var(--blue);letter-spacing:-.03em;line-height:1.2}
+.result .k{margin-top:8px;font-size:13.5px;color:var(--muted);line-height:1.5}
+
+/* skills */
+.skill{display:grid;grid-template-columns:130px 1fr;gap:22px;padding:18px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.skill:last-child{border-bottom:none}
+.skill dt{font-size:13px;font-weight:800;letter-spacing:.09em;color:var(--blue)}
+.skill dd{display:flex;flex-wrap:wrap;gap:8px}
+.skill dd span{font-size:14px;color:var(--ink2);background:#fff;border:1px solid var(--line);border-radius:20px;padding:5px 14px}
+
+/* closing */
+#closing{background:var(--pale);text-align:left;border-top:1px solid #D8E6F2}
+#closing h2{font-size:clamp(26px,4.2vw,40px);line-height:1.34}
+#closing .lead{margin-top:24px;max-width:660px}
+#closing .big{margin-top:20px;font-size:18px;font-weight:800;color:var(--blue);letter-spacing:-.02em;line-height:1.6}
+footer{background:var(--white);padding:34px 0;border-top:1px solid var(--line)}
+.foot-in{max-width:1120px;margin:0 auto;padding:0 40px;display:flex;justify-content:space-between;
+  align-items:center;font-size:12.5px;color:var(--muted)}
+
+@media(max-width:820px){
+  .nav-in,.wide,.foot-in{padding:0 22px}.wrap{padding:0 22px}
+  section{padding:72px 0}#hero{padding:112px 0 68px}
+  .nav-links{gap:14px}.nav-links a:nth-child(-n+2){display:none}
+  .stats{grid-template-columns:1fr 1fr}
+  .g2{grid-template-columns:1fr}
+  .tl-row{grid-template-columns:1fr;gap:8px}
+  .result{grid-template-columns:1fr}
+  .skill{grid-template-columns:1fr;gap:12px}
+  .tbl,.tbl tbody,.tbl tr,.tbl td{display:block;width:100%}
+  .tbl thead{display:none}
+  .tbl tr{border-bottom:1px solid var(--line);padding:12px 0}
+  .tbl tr:last-child{border-bottom:none}
+  .tbl td{border:none;padding:3px 0}
+  .tbl td.b{color:var(--blue)}
+}
+@media print{nav,#bar,footer{display:none}section{padding:36px 0;break-inside:avoid}}
 </style>
 </head>
 <body>
-<a class="home" href="#s0">JOEUN LEE</a>
-<div class="counter" id="counter">01 / 16</div>
-<div class="prog" id="prog"></div>
-
-<div class="deck" id="deck">
-
-  <!-- 0 COVER -->
-  <section class="slide cover" id="s0">
-    <div class="eyebrow">Service Planner · Product Owner · 2026</div>
-    <div class="name">이조은 &nbsp;<span style="font-weight:600;opacity:.55;font-size:.7em;letter-spacing:2px;">JOEUN LEE</span></div>
-    <h1>화면 설계를 넘어<br>비즈니스를 완성하는 기획자</h1>
-    <div class="tags"><span class="tag"># 빛나는 아이디어</span><span class="tag"># 탁월한 실행력</span><span class="tag"># 경험으로 배우는 기획자</span></div>
-    <div class="contact">010-3852-7295 · jony93@naver.com · 경기 화성</div>
-    <div class="hint">스크롤 / → 로 이동</div>
-  </section>
-
-  <!-- 1 TOC -->
-  <section class="slide alt" id="s1">
-    <div class="eyebrow">Contents</div>
-    <h2>목차</h2>
-    <div class="toc">
-      <a href="#s2"><span class="n">01</span><span class="t">About · 강점</span></a>
-      <a href="#s3"><span class="n">02</span><span class="t">핵심 성과</span></a>
-      <a href="#s4"><span class="n">03</span><span class="t">Cre8orClub v3.0 갤러리</span></a>
-      <a href="#s5"><span class="n">04</span><span class="t">클로즈 베타 그로스</span></a>
-      <a href="#s6"><span class="n">05</span><span class="t">요금제 전면 개편</span></a>
-      <a href="#s7"><span class="n">06</span><span class="t">애터미 세일즈업 런칭</span></a>
-      <a href="#s8"><span class="n">07</span><span class="t">회원가입 최적화</span></a>
-      <a href="#s9"><span class="n">08</span><span class="t">물류·관광 · B2B 브랜딩</span></a>
-      <a href="#s10"><span class="n">09</span><span class="t">homey — 앱 0→1 런칭</span></a>
-      <a href="#s11"><span class="n">10</span><span class="t">Skills & Tools</span></a>
-      <a href="#s12"><span class="n">11</span><span class="t">Experience</span></a>
-      <a href="#s13"><span class="n">12</span><span class="t">Awards</span></a>
-      <a href="#s14"><span class="n">13</span><span class="t">Activities & Education</span></a>
+<div id="bar"></div>
+<nav>
+  <div class="nav-in">
+    <a class="nav-name" href="#hero">이조은<em>PRODUCT PLANNER</em></a>
+    <div class="nav-links">
+      <a href="#career">Career</a>
+      <a href="#how">How to Work</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
     </div>
-  </section>
+  </div>
+</nav>
 
-  <!-- 2 ABOUT -->
-  <section class="slide" id="s2">
-    <div class="eyebrow">About</div>
-    <h2>아이디어에서 출발해,<br>제품으로 닫습니다.</h2>
-    <p style="margin-top:24px;max-width:60ch;">단순 UI 개선을 넘어 <b>수익 모델 설계와 정책 수립</b>에 강한 2년 차 기획자입니다. 사내 유일 기획자로 사업 전략부터 상세 설계·PM까지 제품 생애주기 전반을 리드했고, 대학 시절엔 직접 앱을 0에서 런칭했습니다.</p>
-    <div class="cols">
-      <div class="c"><div class="k">💡 빛나는 아이디어</div><div class="d">아이디어 공모전 다수 수상. 피드 → 작품 몰입형 갤러리 전환, 좋아요 → 리스펙트 반응 체계 발상.</div></div>
-      <div class="c"><div class="k">⚡ 탁월한 실행력</div><div class="d">기획→정책→테스트→운영까지 끝까지. 500여 건 결제 로직 테스트, 갤러리 풀사이클 단독.</div></div>
-      <div class="c"><div class="k">🌱 경험으로 배우는 자세</div><div class="d">비전공에서 기획으로 전환. 매주 회고로 다음을 설계하고, 타겟의 페인포인트를 로직으로.</div></div>
+<section id="hero">
+  <div class="wide">
+    <div class="eyebrow">SERVICE · BUSINESS PLANNING PORTFOLIO</div>
+    <h1><span class="hl">AI를 무기로 삼아</span><br>고객의 불편을 해결하는 기획자</h1>
+    <div class="roles">PRODUCT PLANNER &nbsp;·&nbsp; SERVICE PLANNER &nbsp;·&nbsp; BUSINESS PLANNER</div>
+    <p class="lead">데이터와 현장에서 문제를 찾고, 복잡한 요구를 정책과 화면으로 구조화하며, 출시와 운영까지 책임집니다.</p>
+    <div class="spine">
+      <b>시장·고객 분석</b><i>→</i><b>원인 분해</b><i>→</i><b>기준·정책 설계</b><i>→</i><b>예외 확인</b><i>→</i><b>실행·검증</b>
     </div>
-  </section>
-
-  <!-- 3 METRICS -->
-  <section class="slide alt" id="s3">
-    <div class="eyebrow">Key Results</div>
-    <div class="metrics">
-      <div class="metric"><div class="num">1,000%</div><div class="cap">가입 전환율 상승</div><div class="ds">회원가입 최적화 · 소셜 로그인</div></div>
-      <div class="metric"><div class="num">0→1</div><div class="cap">앱 직접 런칭</div><div class="ds">homey · 개발팀 5명 구성 후 배포</div></div>
-      <div class="metric"><div class="num">v3.0</div><div class="cap">크리에이터 플랫폼 리뉴얼</div><div class="ds">갤러리 · 반응 정책 단독 오너</div></div>
+    <div class="stats">
+      <div class="stat"><div class="v">B2B 0→1</div><div class="k">신규 앱 기획·출시</div></div>
+      <div class="stat"><div class="v">노출 로직</div><div class="k">홈 피드 룰·예외 설계</div></div>
+      <div class="stat"><div class="v">72건+</div><div class="k">결제 케이스 직접 테스트</div></div>
+      <div class="stat"><div class="v">54건</div><div class="k">B2B 영업·제안 자료 제작</div></div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- 4 C8 -->
-  <section class="slide" id="s4">
-    <div class="grid">
-      <div>
-        <div class="eyebrow">Product Renewal · 라텔앤드파트너스</div>
-        <h2>Cre8orClub v3.0<br>갤러리 & 반응 시스템</h2>
-        <div class="meta">갤러리 기획 오너 (PO) · 2026.04–진행 중 · 기여도 100%</div>
-        <ul>
-          <li>인스타그램형 피드를 <b>‘작품 몰입형 갤러리’로 전환</b>하는 리뉴얼의 갤러리 단독 오너</li>
-          <li>기획→정책문서→TC→<b>QA 10건</b>→운영 풀 셋팅·개발 F/U 풀사이클</li>
-          <li>좋아요 대체 <b>‘리스펙트’ 반응 체계</b> 설계 + 좋아요·북마크 공통 정책 통일</li>
-          <li>디스커버리 피드·자동재생 로직, 검색 카드뷰, 로그인 카피·QA</li>
-        </ul>
-        <div class="insight"><b>배운 점</b> — 좋은 아이디어는 ‘정합성 있는 정책’으로 박제될 때 비로소 제품이 된다.</div>
+<section id="career">
+  <div class="wrap">
+    <div class="chapter">01 &nbsp; CAREER TIMELINE</div>
+    <div class="tl">
+      <div class="tl-row">
+        <div class="tl-when">2026.03 – 2026.06</div>
+        <div>
+          <div class="tl-who">라텔앤드파트너스<span>신규사업부 기획팀 PO</span></div>
+          <div class="tl-what">Cre8orClub v3.0 갤러리 담당, 피드 노출 로직·반응 정책 설계, TC·QA, 클로즈 베타와 초기 사용자 유입 운영</div>
+        </div>
       </div>
-      <div class="ph">［ 앱 스크린샷 ］<br>Cre8orClub v3.0<br>작품 몰입형 갤러리</div>
-    </div>
-  </section>
-
-  <!-- 5 GROWTH -->
-  <section class="slide alt" id="s5">
-    <div class="grid">
-      <div>
-        <div class="eyebrow">Growth · 라텔앤드파트너스</div>
-        <h2>클로즈 베타<br>시딩 & 초기 유입</h2>
-        <div class="meta">콘텐츠 시딩 · 초대코드 운영 · 어드민 기획 · 2026.04–05</div>
-        <ul>
-          <li>인스타그램·스레드·X 시딩 콘텐츠 직접 게시</li>
-          <li><b>초대코드 53명/77개 발송</b>, 동기간 <b>신규 가입 +34명</b> 확보</li>
-          <li>클로즈 베타 케어 — 댓글 대응, 시드 크리에이터(뮤즈) 제안 전송</li>
-          <li>추천 키워드·데이터 다운로드 어드민 기획 + 오픈 광고 밴드 섭외</li>
-        </ul>
-        <div class="insight"><b>배운 점</b> — 제품의 첫 사용자는 기획서가 아니라 발로 뛴 한 건 한 건에서 온다.</div>
+      <div class="tl-row">
+        <div class="tl-when">2025.02 – 2026.03</div>
+        <div>
+          <div class="tl-who">텍스토리주식회사<span>서비스 기획 연구원</span></div>
+          <div class="tl-what">사내 유일 기획자, 요금제·가격 정책 개편, B2B 앱 출시, 영업 자료·마케팅 담당</div>
+        </div>
       </div>
-      <div class="ph">［ 앱 스크린샷 ］<br>클로즈 베타 초대 · 시딩 화면</div>
-    </div>
-  </section>
-
-  <!-- 6 PRICING -->
-  <section class="slide" id="s6">
-    <div class="grid">
-      <div>
-        <div class="eyebrow">Monetization & Policy · 텍스토리주식회사</div>
-        <h2>요금제 전면 개편</h2>
-        <div class="meta">정책 수립 · 화면 설계 · 프로젝트 리딩 · 2025.05–11 · 기여도 100%</div>
-        <ul>
-          <li><b>매월 1일 정기결제 통일</b> — 15일 결제 어뷰징 원천 차단</li>
-          <li>구간별 요금제 설계 — 데이터 분석으로 상위 요금제 유도</li>
-          <li>부가서비스 기획 — 생일문자·고급템플릿 등 <b>12건 고객 유입</b></li>
-          <li>결제사 변경 대응 첫달 100원 프로모션으로 반발 최소화</li>
-        </ul>
-        <div class="insight"><b>배운 점</b> — 정책부터 <b>500여 건 결제 로직 테스트</b>까지, 마지막 순간까지 책임지는 오너십.</div>
+      <div class="tl-row">
+        <div class="tl-when">2024.12 – 2025.01</div>
+        <div>
+          <div class="tl-who">안앤락<span>플랫폼 기획</span></div>
+          <div class="tl-what">신사업·전략 기획 리서치, 데이터 수집·테스트</div>
+        </div>
       </div>
-      <div class="ph">［ 앱 스크린샷 ］<br>선불 충전 · 구간별 요금제</div>
-    </div>
-  </section>
-
-  <!-- 7 SALESUP -->
-  <section class="slide alt" id="s7">
-    <div class="grid">
-      <div>
-        <div class="eyebrow">New Product Launch (B2B) · 텍스토리주식회사</div>
-        <h2>애터미 세일즈업<br>앱 런칭</h2>
-        <div class="meta">외부 파트너사 협업 · 화면 설계 · 총괄 · 2025.06–10 · 기여도 100%</div>
-        <ul>
-          <li>하위회원 정보·연락처 자동 불러오기</li>
-          <li>재구매 타이밍 알림 · 회원 구매기록 관리</li>
-          <li>상품 링크 문자 발송 · 스케줄 관리·상위 회원 공유</li>
-          <li>4050 여성 사업자의 영업 동선을 그대로 옮긴 핵심 로직</li>
-        </ul>
-        <div class="insight"><b>배운 점</b> — 타겟 고유의 영업 문화·페인포인트를 서비스 핵심 로직으로 설계하는 법.</div>
+      <div class="tl-row">
+        <div class="tl-when">2022.07 – 2024.06</div>
+        <div>
+          <div class="tl-who">창업동아리 ONLY<span>팀 대표</span></div>
+          <div class="tl-what">homey 0→1 앱 출시, 팀 구성, 사업계획서·IR 피칭, 지원금 집행</div>
+        </div>
       </div>
-      <div class="ph">［ 앱 스크린샷 ］<br>구매 기록 · 회원 관리 · 알림</div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- 8 SIGNUP -->
-  <section class="slide" id="s8">
-    <div class="grid">
-      <div>
-        <div class="eyebrow">Operational Excellence · 텍스토리주식회사</div>
-        <h2>회원가입 최적화 &<br>소셜 로그인</h2>
-        <div class="meta">화면 설계 · 테스트 · 2025.03–04 · 기여도 100%</div>
-        <ul>
-          <li>가입 이탈률 감소를 위한 프로세스 재설계</li>
-          <li><b>카카오·구글</b> 등 소셜 API 연동 기획으로 진입 장벽 완화</li>
-          <li>성과 — <b>가입 전환율 1,000% 상승</b></li>
-        </ul>
-        <div class="insight"><b>배운 점</b> — 고객의 실제 환경을 우선한 UX가 실제 비즈니스 성장으로 이어진다.</div>
+<section id="how" class="alt">
+  <div class="wrap">
+    <div class="chapter">02 &nbsp; HOW TO WORK</div>
+    <h2>AI를 업무 시스템으로 만드는 방식</h2>
+    <div class="grid g2" style="margin-top:36px">
+      <div class="card">
+        <div class="meta">개인 업무 방식 정착 | 2025 – 진행 중</div>
+        <h4>업무 자료를 구조화해 AI의 답변 품질을 높였습니다</h4>
+        <p>회의록, 기획안과 데이터가 흩어져 있어 AI가 일반적인 답만 내놓는 문제를 발견했습니다. 업무 기록을 AI가 읽을 수 있는 마크다운으로 통일하고 프로젝트마다 같은 폴더 구조를 유지했습니다. 현재 단계·역할·규칙·정본 위치와 변경 이력을 지침 문서로 관리하자 같은 질문에도 실제 업무 상황에 맞는 답을 얻을 수 있었습니다. 이 방식을 동료와 친구도 적용할 수 있도록 <b>세팅 가이드로 작성해 공유</b>했습니다.</p>
       </div>
-      <div class="ph">［ 앱 스크린샷 ］<br>회원가입 · 소셜 로그인</div>
-    </div>
-  </section>
-
-  <!-- 9 DOMAIN + B2B -->
-  <section class="slide alt" id="s9">
-    <div class="grid solo">
-      <div class="eyebrow">그 외 기여 · 텍스토리주식회사</div>
-      <h2>새 도메인도, 영업·브랜딩도.</h2>
-      <div class="cols" style="margin-top:34px;">
-        <div class="c"><div class="k">물류 · 관광 도메인 기획</div><div class="d">배차·정산 관리 시스템 / 랜드사 블록 관리 서비스를 화면 설계 중심으로 신규 기획.</div></div>
-        <div class="c"><div class="k">B2B 영업 자산</div><div class="d">회사소개서·서비스 제안서·오프라인 팜플렛 기획 및 디자인.</div></div>
-        <div class="c"><div class="k">채널 운영</div><div class="d">공식 블로그·인스타그램 콘텐츠 기획·운영으로 브랜드 인지도 제고.</div></div>
+      <div class="card">
+        <div class="meta">라텔앤드파트너스 | 사내 개인경비 신청 자동화</div>
+        <h4>반복 경비 신청을 자동화했습니다</h4>
+        <p>월초 알림 후 영수증 사진을 폴더에 모으면 신청서와 증빙 묶음이 자동 생성되도록 만들었습니다. 비용 종류와 날짜에 따른 규칙표를 작성하고, 한도 적용·정보 누락·판독 실패·추정 정책은 사람이 최종 확인하도록 별도 목록에 남겼습니다. 팀원이 각자 규칙표를 수정해 사용할 수 있는 형태로 공유했습니다.</p>
       </div>
-      <p class="sub" style="margin-top:30px;">+ 텍스토리 서비스 UI/UX 전체 리뉴얼 (2025.11–2026.02)</p>
     </div>
-  </section>
+    <div class="quote">자동화할 수 있는 일과 사람이 판단해야 하는 일을 구분해 설계했습니다.</div>
+  </div>
+</section>
 
-  <!-- 10 HOMEY -->
-  <section class="slide" id="s10">
-    <div class="grid">
-      <div>
-        <div class="eyebrow">Founder Project · 창업동아리 only</div>
-        <h2>homey — 여성 1인가구<br>주거 안전등급 앱</h2>
-        <div class="meta">팀 대표 (10인) · 기획→개발→배포 총괄 · 런칭 2023.10</div>
-        <ul>
-          <li>아이디어·시장성 평가 후 <b>개발자 5명 개발팀 직접 구성</b></li>
-          <li>여성 1인가구 <b>주거 안전등급 산출 앱 ‘homey’ 런칭</b></li>
-          <li>사업계획서 작성, 다수 창업 대회·지원사업 도전, IR 피칭</li>
-        </ul>
-        <div class="insight"><b>배운 점</b> — 아이디어를 실제로 배포되는 제품까지 끌고 가는 0→1의 전 과정.</div>
+<section id="projects">
+  <div class="wrap">
+    <div class="chapter">03 &nbsp; PROJECTS</div>
+
+    <article class="proj">
+      <div class="pnum">03-1</div>
+      <h3>Cre8orClub 홈 피드 노출 로직 설계</h3>
+      <div class="pmeta"><b>라텔앤드파트너스</b> | 2026.04 – 2026.05</div>
+      <div class="prole"><span>노출 로직·룰·예외 정의</span><span>개발 명세 작성</span></div>
+      <div class="psub">데이터가 없는 출시 초기와 이후를 나눠 설계했습니다</div>
+      <p>출시 직후에는 추천에 사용할 행동 데이터가 없었습니다. 먼저 최근성과 무작위성의 단순 모델을 적용하고, 데이터가 쌓인 뒤 행동 점수·신선도·신규 작가 부스트를 더하는 <b>2단계 로드맵</b>을 설계했습니다.</p>
+      <p>점수만으로 정렬하면 같은 작가와 같은 종류의 콘텐츠가 화면을 채우고, 룰이 늘어나면 서로 충돌합니다. 그래서 처리 기준을 다음 순서로 정했습니다.</p>
+      <div class="rank">
+        <span class="r">노출 자격</span><span class="gt">›</span>
+        <span class="r">콘텐츠 비율</span><span class="gt">›</span>
+        <span class="r">작가 다양성</span><span class="gt">›</span>
+        <span class="r low">카드 간격</span><span class="gt">›</span>
+        <span class="r low">점수</span>
       </div>
-      <div class="ph">［ 앱 스크린샷 ］<br>homey · 주거 안전등급</div>
-    </div>
-  </section>
+      <ul class="dot">
+        <li>차단·비공개·테스터 계정은 점수와 무관하게 후보에서 제외</li>
+        <li>콘텐츠 풀이 부족하면 하위 룰부터 완화하되 빈자리는 만들지 않음</li>
+        <li>사용자가 행동을 취소하면 점수 원복</li>
+        <li>등록 직후에는 본인 게시물 확인 동선을 별도로 보장</li>
+      </ul>
+      <p>점수 공식과 처리 순서, 예외별 기준을 개발자가 추가 질문 없이 구현할 수 있게 정리했습니다.</p>
+      <div class="quote">정상 케이스의 공식보다 예외 처리 기준과 룰 충돌 시 우선순위를 먼저 정해야 로직이 흔들리지 않는다는 것을 배웠습니다.</div>
+    </article>
 
-  <!-- 11 SKILLS -->
-  <section class="slide alt" id="s11">
-    <div class="eyebrow">Skills & Tools</div>
-    <h2>할 수 있는 것.</h2>
-    <div class="rows skill">
-      <div class="row two"><div class="o">Service Planning</div><div class="x">화면 정의서(SB) · 유저 플로우 · 정보 구조(IA) 설계</div></div>
-      <div class="row two"><div class="o">Project Management</div><div class="x">애자일 일정 관리 · 개발/디자인 협업 리딩 · QA(TC 작성)</div></div>
-      <div class="row two"><div class="o">Business Strategy</div><div class="x">시장 조사 · 사업 타당성 분석 · 비즈니스 모델(BM) 수립</div></div>
-      <div class="row two"><div class="o">Marketing</div><div class="x">SNS 채널 운영 · 홍보 콘텐츠 · B2B 영업 자산</div></div>
-      <div class="row two"><div class="o">Tools</div><div class="x">Figma · Notion · Confluence · Slack · PowerPoint · Excel · Word</div></div>
-    </div>
-  </section>
+    <article class="proj">
+      <div class="pnum">03-2</div>
+      <h3>데이터로 광고 퍼널의 원인을 찾았습니다</h3>
+      <div class="pmeta"><b>라텔앤드파트너스</b> | 2026.04 – 2026.06 | 신규 크리에이터 플랫폼 초기 이용자 모집</div>
+      <div class="prole"><span>광고 퍼널 재구성</span><span>원인 분석</span><span>개선안 작성</span></div>
+      <p style="margin-top:26px">신청 단계를 1단계 줄였는데 전환율은 <b>2.19%에서 1.50%로 하락</b>했습니다. 서로 다른 모집단을 구분한 뒤 원인을 영향도 순서로 분석했습니다.</p>
+      <ol class="num">
+        <li>상세 설명 페이지를 없애며 랜딩의 설득 기능까지 삭제</li>
+        <li>광고 목표를 전환이 아닌 트래픽으로 설정</li>
+        <li>타깃 축소로 노출 단가 상승과 반응률 하락</li>
+        <li>가입 의지와 거리가 있는 릴스 지면으로 예산 희석</li>
+      </ol>
+      <p>신청당 비용이 <b>2.5배 악화</b>된 것을 확인해 인스타그램 광고를 중단하고 남은 예산을 재편했습니다.</p>
+      <div class="quote">단계를 줄였지만, 사용자가 신청해야 할 이유도 함께 사라졌습니다.</div>
+    </article>
 
-  <!-- 12 EXPERIENCE -->
-  <section class="slide" id="s12">
-    <div class="eyebrow">Experience</div>
-    <h2>경력.</h2>
-    <div class="rows">
-      <div class="row"><div class="w">2026.03–현재</div><div class="o">라텔앤드파트너스<br><span class="sub">기획팀 주임/계장 (PO)</span></div><div class="x">Cre8orClub v3.0 리뉴얼 / 갤러리·반응 정책 단독 오너, 클로즈 베타 시딩·초기 유입 운영</div></div>
-      <div class="row"><div class="w">2025.02–2026.03</div><div class="o">텍스토리주식회사<br><span class="sub">서비스 기획 연구원 · 사내 유일 기획자</span></div><div class="x">요금제 개편 · 애터미 세일즈업 런칭 · 회원가입 최적화 · 물류/관광 도메인 · UI/UX 리뉴얼 · B2B 영업 자산</div></div>
-      <div class="row"><div class="w">2024.12–2025.01</div><div class="o">안앤락<br><span class="sub">플랫폼 기획팀 사원</span></div><div class="x">신사업·전략 기획 리서치, 데이터 수집·테스트</div></div>
-    </div>
-  </section>
+    <article class="proj">
+      <div class="pnum">03-3</div>
+      <h3>제품을 시장에 연결하는 영업·마케팅</h3>
+      <div class="grid g2" style="margin-top:26px">
+        <div class="card pale">
+          <div class="meta">Cre8orClub | 2026.04 – 2026.06</div>
+          <p>초기 크리에이터 모집을 위해 인스타그램·X·스레드 채널을 세팅하고 콘텐츠와 광고를 직접 운영했습니다. 클로즈 베타에서 초대코드 53명에게 77개를 발송하고 같은 기간 신규 가입자 34명을 추적했으며, 갤러리 기획 오너로 정책·TC·QA를 병행해 제품이 보여주는 가치와 마케팅 메시지를 맞췄습니다.</p>
+        </div>
+        <div class="card pale">
+          <div class="meta">텍스토리주식회사 | 2025 – 2026</div>
+          <p>약 38개 회사를 대상으로 회사소개서·서비스 제안서·팸플릿·협업 제안서 등 <b>54건의 B2B 영업 자료</b>를 제작했습니다. 복잡한 기능을 고객의 문제와 기대효과 중심으로 바꿔 영업 담당자가 현장에서 설명하기 쉽게 만들었고, 공식 블로그와 인스타그램을 운영하며 보도자료를 작성·의뢰해 <b>기사 2건</b>을 송출했습니다.</p>
+        </div>
+      </div>
+      <div class="quote">영업 자료는 보기 좋게 만드는 일이 아니라 상대의 문제와 의사결정 기준에 맞춰 제품의 가치를 번역하는 일이라고 배웠습니다.</div>
+    </article>
 
-  <!-- 13 AWARDS -->
-  <section class="slide alt" id="s13">
-    <div class="eyebrow">Awards</div>
-    <h2>수상.</h2>
-    <div class="rows">
-      <div class="row"><div class="w">2024</div><div class="o">Site 미니 아이코어</div><div class="x"><b>최우수상</b> · 성균관대 창업지원단</div></div>
-      <div class="row"><div class="w">2023</div><div class="o">KHrative Start UP Dream 2.0 아이디어 공모전</div><div class="x"><b>최우수상</b> · 경희대 SW융합대학</div></div>
-      <div class="row"><div class="w">2023</div><div class="o">사회문제해결 자원봉사 아이디어 해커톤</div><div class="x">경기도자원봉사센터이사장상</div></div>
-      <div class="row"><div class="w">2022</div><div class="o">마이크로디그리 수기 공모전</div><div class="x">우수상 · 경희대</div></div>
-      <div class="row"><div class="w">2022</div><div class="o">지식재산기반 아이디어 경진대회</div><div class="x">장려상 · 경희대</div></div>
-      <div class="row"><div class="w">2022</div><div class="o">경희 OPENLAB 테크톤+ / KHrative 2.0</div><div class="x">우수상 (2건) · 경희대</div></div>
-    </div>
-  </section>
+    <article class="proj">
+      <div class="pnum">03-4</div>
+      <h3>세일즈업 B2B 앱 0→1 출시</h3>
+      <div class="pmeta"><b>텍스토리주식회사</b> | 2025.06 – 2025.10 | 5개월 · 기여도 100%</div>
+      <div class="prole"><span>외부 파트너 협업</span><span>타깃·업무 분석</span><span>서비스·화면 기획</span><span>일정 관리</span><span>테스트</span></div>
+      <div class="psub">파트너의 요청을 실제 업무 흐름과 다섯 가지 핵심 기능으로 바꿨습니다</div>
+      <p>외부 파트너사의 4050 여성 사업자에게는 하위 회원, 구매 이력, 재구매 시점과 영업 일정을 한 번에 관리할 도구가 없었습니다.</p>
+      <table class="tbl">
+        <thead><tr><th>영업 과정의 문제</th><th>기획한 기능</th></tr></thead>
+        <tbody>
+          <tr><td>하위 회원 정보를 매번 확인</td><td class="b">계정 연동으로 회원 정보 자동 불러오기</td></tr>
+          <tr><td>적절한 재구매 시점을 놓침</td><td class="b">구매 기록 기반 재구매 알림</td></tr>
+          <tr><td>고객별 구매 이력이 흩어짐</td><td class="b">상품·날짜·메모·후기 통합 관리</td></tr>
+          <tr><td>상품과 계정 정보를 직접 작성해 전달</td><td class="b">선택만 하면 링크가 자동 생성되는 발송 흐름</td></tr>
+          <tr><td>미팅과 상담 일정 공유가 어려움</td><td class="b">스케줄 관리와 상위 회원 공유</td></tr>
+        </tbody>
+      </table>
+      <figure><img src="../자료/사진/애터미.png" alt="세일즈업 B2B 앱 화면 설계"><figcaption>세일즈업 — 회원·구매 이력·재구매 알림·스케줄을 하나의 앱으로 통합</figcaption></figure>
+      <p>파트너 요구를 그대로 받아 적지 않고 실제 업무 과정을 기능과 우선순위로 재구성했습니다. Figma 화면 설계·디자인, 개발 커뮤니케이션, 일정 조율과 테스트를 총괄해 <b>5개월 만에 B2B 신규 앱을 출시</b>했습니다.</p>
+    </article>
 
-  <!-- 14 ACTIVITIES + EDU -->
-  <section class="slide" id="s14">
-    <div class="eyebrow">Activities & Education</div>
-    <h2>대외활동 · 학력.</h2>
-    <div class="rows">
-      <div class="row"><div class="w">2022–2024</div><div class="o">창업동아리 only</div><div class="x">대표 — homey 앱 0→1 런칭, 개발팀 빌딩, 다수 창업대회 수상·IR</div></div>
-      <div class="row"><div class="w">2023–2024</div><div class="o">미래내일 일경험</div><div class="x">팀 리더 — 15팀 중 실행팀 3팀(상위 20%)·최종 우수사례 1팀 선발</div></div>
-      <div class="row"><div class="w">2018–2024</div><div class="o">경희대학교 (국제)</div><div class="x">유전생명공학과 졸업 · 학점 3.4/4.3 · 지식재산능력시험 6급</div></div>
-    </div>
-  </section>
+    <article class="proj">
+      <div class="pnum">03-5</div>
+      <h3>요금제·결제 정책 전면 개편</h3>
+      <div class="pmeta"><b>텍스토리주식회사</b> | 2025.05 – 2025.11 | 기여도 100%</div>
+      <div class="prole"><span>사용 데이터 분석</span><span>요금제·결제 정책 수립</span><span>화면 설계</span><span>일정 관리</span><span>테스트</span></div>
+      <div class="psub">계정을 단속하는 대신, 어뷰징이 성립할 수 없는 구조를 만들었습니다</div>
+      <p>결제일을 악용해 한 달 요금으로 두 달치 문자를 보내는 어뷰징이 반복됐습니다. 기존 요금 구조는 고객이 이해하기 어려웠고, 결제사 변경으로 전 고객이 정기결제를 다시 등록해야 하는 이탈 위험도 있었습니다.</p>
+      <figure><img src="../자료/사진/요금제.png" alt="요금제 개편 화면"><figcaption>요금 구간·부가서비스 구조와 정기결제 재등록 플로우를 함께 설계</figcaption></figure>
+      <ul class="dot">
+        <li>결제일 분포와 전후 사용량을 분석해 전 고객의 정기결제일을 <b>매월 1일</b>로 통일했습니다.</li>
+        <li>고객별 연락처·스토리 사용량을 요금 구간으로 바꾸고, 필요한 용량과 기능을 추가 구매하는 부가서비스 구조를 설계했습니다.</li>
+        <li>정기결제 재등록 플로우와 고객 반발을 낮추기 위한 <b>첫 달 100원 프로모션</b>을 함께 기획했습니다.</li>
+        <li>요금제·결제 화면을 설계하고 예외 조건을 포함한 <b>72건 이상의 결제 케이스</b>를 직접 검증했습니다.</li>
+      </ul>
+      <div class="result">
+        <div><div class="v">구조 전환</div><div class="k">결제일 어뷰징이 발생하기 어려운 구조</div></div>
+        <div><div class="v">15%</div><div class="k">전체 고객의 상위 요금제 이동</div></div>
+        <div><div class="v">12건</div><div class="k">신규 부가서비스로 기업고객 유치</div></div>
+      </div>
+      <div class="quote">어뷰징 계정을 매번 찾는 대신 결제일을 통일해 같은 방식의 어뷰징이 반복되지 않게 했습니다.</div>
+    </article>
 
-  <!-- 15 CLOSING -->
-  <section class="slide dark" id="s15">
-    <div class="eyebrow">Thank You</div>
-    <h1>아이디어를<br>제품으로 닫겠습니다.</h1>
-    <p style="margin-top:26px;opacity:.85;max-width:48ch;">화면을 그리는 데서 멈추지 않고, 정책·테스트·운영까지 끝까지 책임지는 기획자 이조은입니다.</p>
-    <div class="contact" style="position:static;margin-top:36px;opacity:.7;">이조은 · 010-3852-7295 · jony93@naver.com</div>
-  </section>
+    <article class="proj">
+      <div class="pnum">03-6</div>
+      <h3>낯선 도메인을 서비스로 구조화</h3>
+      <div class="pmeta"><b>텍스토리주식회사</b> | 2025.02 – 2025.06</div>
 
-</div>
+      <div class="psub">배차관리 솔루션 고도화</div>
+      <figure><img src="../자료/사진/배차관리.png" alt="배차관리 솔루션 화면"><figcaption>예약 → 배차 → 운행 → 정산으로 재구성한 운영 흐름</figcaption></figure>
+      <p>고객사 미팅과 반복 피드백을 통해 운행 이후 정산이 가장 큰 병목임을 확인했습니다. 예약과 배차 중심이던 서비스를 <b>예약 → 배차 → 운행 → 정산</b>으로 재구성하고 실비·영수증·기사 급여·차량 손익을 하나의 흐름으로 연결했으며, 운행 전 알림과 기사 준비 확인으로 지각·불참 같은 운영 리스크도 시스템이 미리 잡도록 설계했습니다.</p>
+
+      <div class="psub">랜드사 호텔 블록관리 시스템</div>
+      <figure><img src="../자료/사진/랜드사관리.png" alt="호텔 블록관리 시스템 화면"><figcaption>캘린더 기반 블록 현황과 예약 신청·승인, 권한 관리</figcaption></figure>
+      <p>랜드사가 호텔 블록을 엑셀과 수기로 관리하다 중복 예약으로 손실이 발생하는 문제에서 시작했습니다. 낯선 관광 B2B 용어와 업무 규칙을 빠르게 학습해 캘린더 기반 블록 현황과 예약 신청·승인, 권한 관리로 이어지는 웹 서비스로 구현하고, 보유 블록을 넘는 예약은 추가 요청 건으로 자동 전환되도록 했습니다.</p>
+
+      <div class="psub">회원가입 퍼널 재설계</div>
+      <figure><img src="../자료/사진/텍스토리 로그인.png" alt="텍스토리 로그인·회원가입 화면"><figcaption>소셜 로그인·본인확인·필수 입력을 하나의 온보딩 흐름으로 연결</figcaption></figure>
+      <p>기존 가입은 이메일 인증 중심이라 아이디·비밀번호를 새로 만들고 여러 정보를 반복 입력해야 했습니다. 단계를 무조건 줄이기보다 소셜 로그인과 휴대폰 본인확인의 역할을 구분하고, 로그인·본인확인·필수 입력을 하나의 온보딩 흐름으로 연결했습니다. 퍼널 분석부터 화면 설계, 외부 연동 기획과 테스트까지 전 과정을 담당했습니다.</p>
+
+      <div class="quote">고객 환경과 운영 과제를 분석하면 제품이 다음에 가야 할 방향이 보인다는 것을 경험했습니다.</div>
+    </article>
+
+    <article class="proj">
+      <div class="pnum">03-7</div>
+      <h3>시장의 질문에서 시작한 앱 개발 프로젝트</h3>
+      <div class="pmeta"><b>창업동아리 ONLY</b> | 2022.07 – 2024.06</div>
+      <div class="grid g2" style="margin-top:26px">
+        <div class="card">
+          <div class="meta">픽카이브 | 2024.01 – 2024.06</div>
+          <h4>잠재고객 35명 대면 인터뷰로 사업성 검증</h4>
+          <p>어린이집·유치원의 사진 공유가 불편할 것이라는 가설을 검증하기 위해 관계자와 잠재고객 <b>35명을 직접 만났습니다</b>. 랜딩페이지로 관심도를 확인하고 지역 기관에 직접 전화해 초기 영업 접점을 만들었으며, 확인한 내용을 바탕으로 앱과 사업계획서를 설계하고 IR 피칭까지 진행해 <b>Site 미니 아이코어 최우수상</b>을 수상하고 예비창업패키지 서류를 통과했습니다.</p>
+        </div>
+        <div class="card">
+          <div class="meta">homey | 2022.07 – 2024.06</div>
+          <h4>개발자 5명을 모아 실제 앱 출시</h4>
+          <p>여성 1인 가구가 집을 구할 때 범죄 위험과 주변 환경을 객관적으로 확인하기 어렵다는 문제에서 출발했습니다. 대학 커뮤니티에 아이디어를 올리고 개인 미팅을 거쳐 <b>개발자 5명을 직접 섭외</b>했고, 사용자 플로우와 단계별 개발 계획을 세워 기획·디자인·개발·배포 전 과정을 리드해 실제 앱을 출시했습니다. <b>2,260만 원 규모 지원금</b>의 계약서·세금계산서·결과보고 등 증빙도 단독으로 관리했습니다.</p>
+        </div>
+      </div>
+      <div class="quote">방법이 없는 곳에서 스스로 길을 만들고 자원과 사람을 모아 답을 찾아간 경험입니다.</div>
+    </article>
+
+  </div>
+</section>
+
+<section id="skills" class="alt">
+  <div class="wrap">
+    <div class="chapter">04 &nbsp; SKILLS &amp; TOOLS</div>
+    <dl>
+      <div class="skill"><dt>RESEARCH</dt><dd>
+        <span>시장·고객 리서치</span><span>대면 인터뷰</span><span>랜딩페이지 검증</span><span>퍼널·사용 데이터 분석</span></dd></div>
+      <div class="skill"><dt>PRODUCT</dt><dd>
+        <span>요구사항 정의</span><span>사용자 플로우</span><span>화면 설계</span><span>정책·우선순위·엣지케이스 명세</span></dd></div>
+      <div class="skill"><dt>BUSINESS</dt><dd>
+        <span>BM·요금제·가격·패키징</span><span>사업계획서</span><span>IR</span><span>Sales Kit·제안서</span></dd></div>
+      <div class="skill"><dt>EXECUTION</dt><dd>
+        <span>일정 관리</span><span>외부 파트너·개발 협업</span><span>TC·QA</span><span>운영 세팅</span><span>초기 사용자 유입</span></dd></div>
+      <div class="skill"><dt>AI &amp; AUTOMATION</dt><dd>
+        <span>업무 지식 구조화</span><span>작업 지침 관리</span><span>반복 문서 자동화</span><span>사람 검토 기준 설계</span></dd></div>
+      <div class="skill"><dt>TOOLS</dt><dd>
+        <span>Figma</span><span>PowerPoint</span><span>Excel</span><span>Word</span><span>Notion</span><span>Obsidian</span><span>Confluence</span><span>Jira</span><span>GitHub</span><span>Slack</span></dd></div>
+    </dl>
+  </div>
+</section>
+
+<section id="closing">
+  <div class="wrap">
+    <h2>문제를 발견하는 데서 멈추지 않고,<br>기준을 세우고 실행해 서비스가 움직이게 합니다.</h2>
+    <p class="lead">제품 기획의 시작은 화면이 아니라 질문이라고 생각합니다.</p>
+    <div class="big">왜 이 제품이 필요한가. 어떤 고객 문제를 풀어야 하는가.</div>
+    <p class="lead">저는 본질을 찾아가는 질문을 던지고, 시장과 데이터로 답을 만들고, 정책과 자료로 완성합니다.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-in">
+    <div>이조은 · 서비스·사업 기획 포트폴리오</div>
+    <div>v1.0</div>
+  </div>
+</footer>
 
 <script>
-  const deck=document.getElementById('deck');
-  const slides=[...document.querySelectorAll('.slide')];
-  const counter=document.getElementById('counter');
-  const prog=document.getElementById('prog');
-  const total=String(slides.length).padStart(2,'0');
-  function cur(){return Math.max(0,Math.min(slides.length-1,Math.round(deck.scrollTop/window.innerHeight)));}
-  function go(i){i=Math.max(0,Math.min(slides.length-1,i));slides[i].scrollIntoView();}
-  function paint(){const i=cur();counter.textContent=String(i+1).padStart(2,'0')+' / '+total;const max=deck.scrollHeight-window.innerHeight;prog.style.width=(max>0?(deck.scrollTop/max*100):0)+'%';}
-  addEventListener('keydown',e=>{
-    if(['ArrowDown','PageDown','ArrowRight',' '].includes(e.key)){e.preventDefault();go(cur()+1);}
-    else if(['ArrowUp','PageUp','ArrowLeft'].includes(e.key)){e.preventDefault();go(cur()-1);}
-    else if(e.key==='Home'){e.preventDefault();go(0);}
-    else if(e.key==='End'){e.preventDefault();go(slides.length-1);}
-  });
-  deck.addEventListener('scroll',()=>{requestAnimationFrame(paint);});
-  paint();
+(function(){
+  var bar=document.getElementById('bar');
+  var links=[].slice.call(document.querySelectorAll('.nav-links a'));
+  var secs=links.map(function(a){return document.querySelector(a.getAttribute('href'));});
+  function onScroll(){
+    var h=document.documentElement.scrollHeight-window.innerHeight;
+    bar.style.width=(h>0?(window.scrollY/h)*100:0)+'%';
+    var i=-1;
+    for(var k=0;k<secs.length;k++){
+      if(secs[k]&&secs[k].getBoundingClientRect().top<=120) i=k;
+    }
+    links.forEach(function(a,k){a.classList.toggle('on',k===i);});
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  window.addEventListener('resize',onScroll);
+  onScroll();
+})();
 </script>
 </body>
 </html>
