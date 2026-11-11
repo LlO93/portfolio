@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>이조은 | 서비스·사업 기획 포트폴리오</title>
+<title>이조은 | 서비스·플랫폼 기획 포트폴리오</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.css" rel="stylesheet">
@@ -20,7 +20,7 @@ html{scroll-behavior:smooth}
 body{font-family:var(--sans);color:var(--ink2);background:var(--white);line-height:1.72;font-size:16px;
   -webkit-font-smoothing:antialiased;word-break:keep-all;letter-spacing:-.005em}
 ::selection{background:var(--blue);color:#fff}
-img{max-width:100%;display:block}
+img{max-width:100%;height:auto;display:block}
 a{color:inherit}
 
 #bar{position:fixed;top:0;left:0;height:2.5px;background:var(--blue);width:0;z-index:80;transition:width .12s linear}
@@ -163,313 +163,379 @@ footer{background:var(--white);padding:34px 0;border-top:1px solid var(--line)}
   .tbl td.b{color:var(--blue)}
 }
 @media print{nav,#bar,footer{display:none}section{padding:36px 0;break-inside:avoid}}
+
+/* Career and project decisions: 2026.11.11 */
+section,article[id]{scroll-margin-top:82px}
+#hero{padding:120px 0 66px}
+#hero h1{font-size:clamp(30px,4.6vw,46px);max-width:900px}
+#hero .lead{max-width:760px;font-size:16.5px}
+.hero-name{margin-top:22px;font-size:14px;font-weight:700;color:var(--blue)}
+.hero-name a{font-weight:500;color:var(--muted);text-decoration:none;margin-left:16px}
+#career{padding-top:64px}
+.career-note{font-size:13px;color:var(--muted);margin:16px 0 24px}
+.career-note b{color:var(--blue)}
+.tl-row.primary .tl-who{color:var(--ink)}
+.tl-row.primary{border-left:3px solid var(--blue);padding-left:20px}
+.tl-who span{margin:5px 4px 0 7px;vertical-align:1px}
+.tl-who span.spotlight{background:#FFF4CF;color:#8A650A;border:1px solid #F2D77C}
+.tl-row.secondary .tl-who{font-size:16px;font-weight:600;color:var(--ink)}
+.tl-row.secondary .tl-who span{background:var(--pale2);color:var(--muted)}
+.tl-projects{list-style:none;margin-top:12px;display:grid;gap:5px}
+.tl-projects li{position:relative;padding-left:15px;font-size:14.5px;line-height:1.6}
+.tl-projects li::before{content:"-";position:absolute;left:0;color:var(--blue)}
+.tl-projects a{text-decoration:none}
+.tl-projects a:hover{text-decoration:underline;color:var(--blue)}
+.tl-what{font-size:14px}
+.activity-title{margin:38px 0 14px;font-size:13px;letter-spacing:.08em;color:var(--muted);font-weight:700}
+.project-nav{margin:24px 0 36px;display:flex;flex-wrap:wrap;gap:8px}
+.project-nav a{font-size:13px;border:1px solid var(--line);border-radius:8px;padding:7px 12px;text-decoration:none;color:var(--muted);background:var(--white)}
+.project-nav a:hover{border-color:var(--blue);color:var(--blue)}
+.proj{padding:52px 0}
+.proj h3{font-size:clamp(26px,3.8vw,34px)}
+.proj .intro{margin-top:24px;font-size:16px;line-height:1.8}
+.proj .psub{font-size:17px;margin-top:26px}
+.quote{font-size:15.5px;font-weight:500}
+.quote b{font-weight:750}
+.scope{margin-top:18px;font-size:13px;color:var(--muted);line-height:1.7}
+.result{grid-template-columns:repeat(3,1fr)}
+.mini-result{margin-top:20px;padding:15px 18px;border-radius:10px;background:var(--pale);color:var(--blue-d);font-size:14px;font-weight:600;line-height:1.7}
+.subproject{margin-top:36px;padding-top:32px;border-top:1px solid var(--line)}
+.subproject h4{font-size:20px;line-height:1.5}
+.subproject .pmeta{margin-top:8px}
+.proj .grid .card h4{font-size:18px;line-height:1.5}
+.proj .grid .card .quote{font-size:14px;padding:15px 17px;margin-top:20px}
+.screen-pair{display:grid;grid-template-columns:1fr 230px;gap:32px;align-items:start;margin-top:28px}
+.screen-pair figure{margin:0}
+.screen-pair img{width:100%;max-height:420px;object-fit:contain;background:#111}
+.card .dot li{font-size:14px}
+#how h2,#ai h2{font-size:26px}
+#how .card{padding:24px}
+#how .card h3{font-size:17px}
+#how .card p{font-size:14.5px}
+#ai{padding:72px 0}
+.ai-layout{display:grid;grid-template-columns:1fr 210px;gap:36px;align-items:start;margin-top:28px}
+.ai-layout figure{margin-top:0}
+.ai-layout figure img{width:100%;max-height:250px;object-fit:cover;object-position:top}
+.evidence-note{font-size:12px;color:var(--muted);margin-top:12px}
+#skills{padding-top:72px}
+.education-details{margin-top:32px}
+.education-details summary{cursor:pointer;color:var(--ink);font-weight:700;font-size:16px;padding:16px 0;border-top:1px solid var(--line)}
+#closing h2{font-size:clamp(26px,4vw,36px)}
+#closing .lead{font-size:16px}
+#closing .contact{margin-top:28px;font-size:14px;color:var(--blue)}
+#closing .contact a{text-decoration:none}
+@media(max-width:820px){
+ #hero{padding:106px 0 52px}#career{padding-top:48px}
+ .nav-name em{display:none}.nav-links{gap:15px}.nav-links a:nth-child(-n+2){display:inline}
+ .nav-links a{font-size:12px}.nav-links a[href="#how"]{display:none}
+ .tl-row.primary{padding-left:14px}.tl-who span{margin-left:0;margin-right:7px}
+ .tl-who{display:flex;flex-wrap:wrap;align-items:center;column-gap:8px}
+ .result{grid-template-columns:1fr}.screen-pair,.ai-layout{grid-template-columns:1fr}
+ .screen-pair figure{max-width:230px;margin:0 auto}
+ .ai-layout figure{max-width:280px}.hero-name a{display:block;margin:6px 0 0}
+ .proj{padding:40px 0}.card{padding:24px}.project-nav{gap:7px}
+}
+@media(max-width:370px){.nav-in{padding:0 16px}.nav-links{gap:11px}.nav-name{font-size:14px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+@media print{
+ section{break-inside:auto}article,figure,.card,.quote,.tl-row{break-inside:avoid}
+ .project-nav{display:none}.education-details>div{display:block!important}
+ #hero{padding-top:36px}.wrap,.wide{max-width:100%;padding:0 24px}
+}
+
 </style>
 </head>
 <body>
-<div id="bar"></div>
-<nav>
+<div id="bar" aria-hidden="true"></div>
+<nav aria-label="포트폴리오 탐색">
   <div class="nav-in">
-    <a class="nav-name" href="#hero">이조은<em>PRODUCT PLANNER</em></a>
+    <a class="nav-name" href="#hero">이조은<em>SERVICE PLANNER</em></a>
     <div class="nav-links">
-      <a href="#career">Career</a>
-      <a href="#how">How to Work</a>
-      <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
+      <a href="#career">Career</a><a href="#projects">Projects</a><a href="#how">How to Work</a><a href="#ai">AI</a><a href="#skills">Skills</a>
     </div>
   </div>
 </nav>
 
+<main>
 <section id="hero">
   <div class="wide">
-    <div class="eyebrow">SERVICE · BUSINESS PLANNING PORTFOLIO</div>
-    <h1><span class="hl">AI를 무기로 삼아</span><br>고객의 불편을 해결하는 기획자</h1>
-    <div class="roles">PRODUCT PLANNER &nbsp;·&nbsp; SERVICE PLANNER &nbsp;·&nbsp; BUSINESS PLANNER</div>
-    <p class="lead">데이터와 현장에서 문제를 찾고, 복잡한 요구를 정책과 화면으로 구조화하며, 출시와 운영까지 책임집니다.</p>
-    <div class="spine">
-      <b>시장·고객 분석</b><i>→</i><b>원인 분해</b><i>→</i><b>기준·정책 설계</b><i>→</i><b>예외 확인</b><i>→</i><b>실행·검증</b>
-    </div>
-    <div class="stats">
-      <div class="stat"><div class="v">B2B 0→1</div><div class="k">신규 앱 기획·출시</div></div>
-      <div class="stat"><div class="v">노출 로직</div><div class="k">홈 피드 룰·예외 설계</div></div>
-      <div class="stat"><div class="v">72건+</div><div class="k">결제 케이스 직접 테스트</div></div>
-      <div class="stat"><div class="v">54건</div><div class="k">B2B 영업·제안 자료 제작</div></div>
-    </div>
+    <div class="eyebrow">SERVICE · PLATFORM PLANNING PORTFOLIO</div>
+    <h1>고객의 업무를 이해하고,<br><span class="hl">복잡한 요구를 기능과 정책으로 구체화합니다.</span></h1>
+    <p class="lead">문자 발송 서비스의 요금제를 개편하고 영업관리 앱을 출시했습니다.<br>왜 필요한지 판단하고 화면과 운영 기준을 설계한 뒤 개발팀과 테스트·출시를 진행했습니다.</p>
+    <div class="hero-name">서비스 기획자 이조은 <a href="mailto:jony93@naver.com">jony93@naver.com</a></div>
   </div>
 </section>
 
 <section id="career">
   <div class="wrap">
-    <div class="chapter">01 &nbsp; CAREER TIMELINE</div>
+    <div class="chapter">01 &nbsp; CAREER</div>
+    <h2>경력과 프로젝트를 소개합니다</h2>
+    <p class="career-note">창업 활동은 직장경력과 별도로 구분했습니다.</p>
+    <div class="tl">
+      <div class="tl-row primary">
+        <div class="tl-when">2026.03 ~ 2026.06</div>
+        <div>
+          <div class="tl-who">라텔앤드파트너즈<span>신규사업부 기획팀 · 주임(PO)</span></div>
+          <ul class="tl-projects">
+            <li><a href="#gallery">Cre8orClub 갤러리 메뉴 신설</a></li>
+            <li><a href="#feed">홈 피드 콘텐츠 노출 기준 설계</a></li>
+            <li><a href="#acquisition">초기 크리에이터 모집·광고 분석</a></li>
+            <li><a href="#ratel-other">로그인·회원가입 진입 흐름 정리</a></li>
+            <li><a href="#ai">개인경비 신청 자동화</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="tl-row primary">
+        <div class="tl-when">2025.02 ~ 2026.03</div>
+        <div>
+          <div class="tl-who">텍스토리<span>서비스 기획 연구원</span><span class="spotlight">사내 유일 기획자</span></div>
+          <ul class="tl-projects">
+            <li><a href="#pricing">요금제·가격정책 개편</a></li>
+            <li><a href="#salesup">세일즈업 앱 신규 런칭 PM</a></li>
+            <li><a href="#dispatch">배차·정산관리 솔루션 고도화</a></li>
+            <li><a href="#hotel">호텔 객실 물량 관리 시스템 기획</a></li>
+            <li><a href="#signup">회원가입 개선·전체 화면 및 디자인 개편</a></li>
+            <li><a href="#communication">프로모션·영업·고객 안내 자료 제작</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="tl-row primary">
+        <div class="tl-when">2024.12 ~ 2025.01</div>
+        <div><div class="tl-who">안앤락<span>플랫폼 기획팀 · 사원</span></div></div>
+      </div>
+      <div class="tl-row secondary">
+        <div class="tl-when">2023.03 ~ 2024.10</div>
+        <div><div class="tl-who">코드수학학원<span>중등 전임 수학 강사</span></div><div class="tl-what">학생별 수업·학습 기록과 학부모 상담, 교재 제작·학원 홍보 담당</div></div>
+      </div>
+    </div>
+    <div class="activity-title">창업 활동</div>
     <div class="tl">
       <div class="tl-row">
-        <div class="tl-when">2026.03 – 2026.06</div>
-        <div>
-          <div class="tl-who">라텔앤드파트너스<span>신규사업부 기획팀 PO</span></div>
-          <div class="tl-what">Cre8orClub v3.0 갤러리 담당, 피드 노출 로직·반응 정책 설계, TC·QA, 클로즈 베타와 초기 사용자 유입 운영</div>
-        </div>
-      </div>
-      <div class="tl-row">
-        <div class="tl-when">2025.02 – 2026.03</div>
-        <div>
-          <div class="tl-who">텍스토리주식회사<span>서비스 기획 연구원</span></div>
-          <div class="tl-what">사내 유일 기획자, 요금제·가격 정책 개편, B2B 앱 출시, 영업 자료·마케팅 담당</div>
-        </div>
-      </div>
-      <div class="tl-row">
-        <div class="tl-when">2024.12 – 2025.01</div>
-        <div>
-          <div class="tl-who">안앤락<span>플랫폼 기획</span></div>
-          <div class="tl-what">신사업·전략 기획 리서치, 데이터 수집·테스트</div>
-        </div>
-      </div>
-      <div class="tl-row">
-        <div class="tl-when">2022.07 – 2024.06</div>
+        <div class="tl-when">2022.07 ~ 2024.06</div>
         <div>
           <div class="tl-who">창업동아리 ONLY<span>팀 대표</span></div>
-          <div class="tl-what">homey 0→1 앱 출시, 팀 구성, 사업계획서·IR 피칭, 지원금 집행</div>
+          <div class="tl-what">개발자 5명을 포함한 총 8명의 팀 구성·운영. homey 앱 출시와 픽카이브 고객 검증</div>
+          <ul class="tl-projects">
+            <li><b>미래내일 일경험 사업: 기획 2개월·실행 5개월, 최종 우수사례팀 선정</b></li>
+            <li><b>2023·2024년 예비창업패키지 서류 통과 후 발표심사 경험</b></li>
+          </ul>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<section id="how" class="alt">
+<section id="projects" class="alt">
   <div class="wrap">
-    <div class="chapter">02 &nbsp; HOW TO WORK</div>
-    <h2>AI를 업무 시스템으로 만드는 방식</h2>
-    <p class="lead" style="margin-top:18px">같은 모델을 쓰는데도 결과가 갈리는 이유를 찾다가, 문제가 질문하는 방식이 아니라 AI가 놓인 환경에 있다고 봤습니다. 그래서 재료·기준·책임 세 가지를 순서대로 정리했습니다.</p>
-
-    <div class="grid g3" style="margin-top:32px">
-      <div class="card pale"><div class="meta">재료를 만든다</div><p>업무 기록을 AI가 읽을 수 있는 형태로 모으고 프로젝트마다 같은 구조를 유지</p></div>
-      <div class="card pale"><div class="meta">기준을 고친다</div><p>모델이 바뀔 때마다 작업 지침의 어긋난 문장을 찾아 고치고 변경 이력을 남김</p></div>
-      <div class="card pale"><div class="meta">책임을 남긴다</div><p>자동화할 일과 사람이 확인할 일을 나눠 설계</p></div>
+    <div class="chapter">02 &nbsp; PROJECTS</div>
+    <h2>무엇을 만들었는지와<br>왜 그렇게 기획했는지를 함께 담았습니다</h2>
+    <div class="project-nav" aria-label="프로젝트 바로가기">
+      <a href="#pricing">01 요금제</a><a href="#salesup">02 세일즈업</a><a href="#solutions">03 업종별 솔루션</a><a href="#ratel">04 Cre8orClub</a><a href="#other">05 그 밖의 프로젝트</a><a href="#startup">06 창업</a>
     </div>
 
-    <article class="proj" style="padding-top:48px">
-      <div class="pnum">개인 업무 방식 정착 | 2025 – 진행 중</div>
-      <h3>업무 자료를 구조화해 AI의 답변 품질을 높였습니다</h3>
-      <p style="margin-top:18px">AI에게 마케팅 방안을 물으면 어디서나 볼 수 있는 일반적인 대답이 나왔습니다. 프롬프트를 길게 써도 결과는 크게 달라지지 않았습니다. AI가 참고할 업무 자료가 흩어져 있는 것이 원인이었습니다.</p>
-      <table class="tbl">
-        <thead><tr><th>흩어져 있던 상태</th><th>구조화한 뒤</th></tr></thead>
-        <tbody>
-          <tr><td>회의록은 메신저에 남음</td><td class="b">업무 기록을 AI가 읽을 수 있는 마크다운으로 통일</td></tr>
-          <tr><td>기획안과 데이터가 서로 다른 폴더와 파일에 있음</td><td class="b">프로젝트마다 같은 폴더 구조 유지</td></tr>
-          <tr><td>새 대화마다 배경을 다시 설명함</td><td class="b">현재 단계·역할·규칙·정본 위치를 지침 문서로 관리</td></tr>
-          <tr><td>지난 결정이 어디 있는지 찾지 못함</td><td class="b">결정사항과 변경 이력을 다음 작업의 재료로 축적</td></tr>
-        </tbody>
-      </table>
-      <figure><img src="images/ai-setting-guide.png" alt="AI 업무 세팅 가이드"><figcaption>동료와 친구가 그대로 적용할 수 있도록 정리해 공유한 세팅 가이드</figcaption></figure>
-      <p>같은 질문에도 실제 업무 상황에 맞는 답을 얻을 수 있었습니다. 이 방식을 동료와 친구도 적용할 수 있도록 <b>세팅 가이드로 작성해 공유</b>했습니다.</p>
-      <div class="quote">자료를 모아두고 그 위치를 알려주니 AI가 제 업무 상황에 맞는 답을 내기 시작했습니다.</div>
-    </article>
-
-    <article class="proj">
-      <div class="pnum">작업 지침 관리 | 2025 – 진행 중</div>
-      <h3>모델이 바뀔 때마다 작업 지침도 함께 고쳤습니다</h3>
-      <p style="margin-top:18px">모델이 바뀔 때마다 생기는 문제가 달랐습니다. 같은 지침을 계속 쓰면 작업이 너무 빨리 실행되거나 반대로 불필요하게 멈췄습니다. 도구를 바꾸는 대신 지침 문장을 고치는 쪽을 택했습니다.</p>
-      <table class="tbl">
-        <thead><tr><th>구분</th><th>이전 모델</th><th>바뀐 모델</th></tr></thead>
-        <tbody>
-          <tr><td>자주 생긴 문제</td><td>정보가 부족해도 바로 파일을 만들고 작업을 시작함</td><td>정보가 충분해도 허락을 묻고 작업을 멈춤</td></tr>
-          <tr><td>적용한 지침</td><td class="b">중요한 결정은 멈추고 물으라고 지시</td><td class="b">결과 방향이 달라질 때·되돌리기 어려운 작업·사용자만 아는 정보, 이 세 경우에만 질문하고 나머지는 가정을 밝힌 뒤 진행</td></tr>
-        </tbody>
-      </table>
-      <div class="spine" style="margin-top:26px">
-        <b>새 모델 공개</b><i>→</i><b>공식 문서와 실제 결과 비교</b><i>→</i><b>반복되는 문장 수정</b><i>→</i><b>변경 이력 기록</b>
-      </div>
-      <p>기존 지침을 쓰는 중에도 같은 문제가 반복되면 그 문장을 바로 고쳤습니다. 지침을 한 번 만들고 두는 문서가 아니라 계속 고치는 문서로 다뤘습니다.</p>
-      <div class="quote">모델이 바뀌면 프롬프트를 다시 쓰기보다 지침의 어느 문장이 어긋났는지를 먼저 찾았습니다.</div>
-    </article>
-
-    <article class="proj">
-      <div class="pnum">라텔앤드파트너스 | 사내 개인경비 신청 자동화</div>
-      <h3>반복 경비 신청을 자동화했습니다</h3>
-      <div class="prole"><span>자동화 제작</span><span>규칙표 작성</span><span>팀 공유</span></div>
-      <p style="margin-top:18px">영수증 분류, 회사 양식 작성, 이미지 묶음 생성은 매달 반복됐습니다. 문서 작성에 드는 시간을 줄이려고 자동화했습니다.</p>
-      <div class="spine" style="margin-top:24px">
-        <b>월초 알림</b><i>→</i><b>영수증 사진을 폴더로 이동</b><i>→</i><b>신청서·증빙 자동 생성</b><i>→</i><b>사람의 최종 확인</b>
-      </div>
-      <table class="tbl">
-        <thead><tr><th>영수증 종류</th><th>조건</th><th>판정</th></tr></thead>
-        <tbody>
-          <tr><td>택시</td><td>요일 무관</td><td class="b">야근 교통비</td></tr>
-          <tr><td>식당·편의점·배달</td><td>평일</td><td class="b">야근 식대</td></tr>
-          <tr><td>식당·편의점·배달</td><td>주말</td><td class="b">휴일 식대</td></tr>
-        </tbody>
-      </table>
-      <div class="psub" style="font-size:16.5px;margin-top:28px">사람이 확인하도록 남긴 것</div>
+    <article class="proj" id="pricing">
+      <div class="pnum">PROJECT 01</div>
+      <h3>요금제·가격정책 개편</h3>
+      <div class="pmeta"><b>텍스토리</b> | 2025.05 ~ 2025.11</div>
+      <div class="prole"><span>사용량 분석</span><span>요금·결제정책</span><span>화면 설계</span><span>일정 관리·테스트</span></div>
+      <p class="intro">사용량 제한이 없던 문자 발송 서비스에 이용 한도를 도입해 상위 요금제 가입을 유도하고 운영비를 줄여야 했습니다. 약 10년간 기능이 추가된 요금 체계를 고객별 사용량을 기준으로 다시 구성했습니다.</p>
+      <figure><img src="images/textory-pricing.png" alt="요금제와 추가 구매 항목 선택 및 변경 후 결제금액 확인 설계 화면" width="1545" height="800"><figcaption>기본 요금제와 추가 구매 항목을 고른 뒤 변경 후 결제 내용을 확인하는 설계 화면</figcaption></figure>
       <ul class="dot">
-        <li>한도 적용으로 결제액과 청구액이 다른 항목</li>
-        <li>영수증에 없어 자동으로 알 수 없는 정보</li>
-        <li>판독이 흐리거나 별칭표에 없는 장소</li>
-        <li>과거 데이터에서 추정한 회사 정책</li>
-      </ul>
-      <p>팀원이 각자 규칙표를 수정해 사용할 수 있는 형태로 공유했습니다.</p>
-      <div class="quote">자동화할 수 있는 일과 사람이 판단해야 하는 일을 구분해 설계했습니다.</div>
-    </article>
-  </div>
-</section>
-
-<section id="projects">
-  <div class="wrap">
-    <div class="chapter">03 &nbsp; PROJECTS</div>
-
-    <article class="proj">
-      <div class="pnum">03-1</div>
-      <h3>Cre8orClub 홈 피드 노출 로직 설계</h3>
-      <div class="pmeta"><b>라텔앤드파트너스</b> | 2026.04 – 2026.05</div>
-      <div class="prole"><span>노출 로직·룰·예외 정의</span><span>개발 명세 작성</span></div>
-      <div class="psub">데이터가 없는 출시 초기와 이후를 나눠 설계했습니다</div>
-      <p>출시 직후에는 추천에 사용할 행동 데이터가 없었습니다. 먼저 최근성과 무작위성의 단순 모델을 적용하고, 데이터가 쌓인 뒤 행동 점수·신선도·신규 작가 부스트를 더하는 <b>2단계 로드맵</b>을 설계했습니다.</p>
-      <p>점수만으로 정렬하면 같은 작가와 같은 종류의 콘텐츠가 화면을 채우고, 룰이 늘어나면 서로 충돌합니다. 그래서 처리 기준을 다음 순서로 정했습니다.</p>
-      <div class="rank">
-        <span class="r">노출 자격</span><span class="gt">›</span>
-        <span class="r">콘텐츠 비율</span><span class="gt">›</span>
-        <span class="r">작가 다양성</span><span class="gt">›</span>
-        <span class="r low">카드 간격</span><span class="gt">›</span>
-        <span class="r low">점수</span>
-      </div>
-      <ul class="dot">
-        <li>차단·비공개·테스터 계정은 점수와 무관하게 후보에서 제외</li>
-        <li>콘텐츠 풀이 부족하면 하위 룰부터 완화하되 빈자리는 만들지 않음</li>
-        <li>사용자가 행동을 취소하면 점수 원복</li>
-        <li>등록 직후에는 본인 게시물 확인 동선을 별도로 보장</li>
-      </ul>
-      <p>점수 공식과 처리 순서, 예외별 기준을 개발자가 추가 질문 없이 구현할 수 있게 정리했습니다.</p>
-      <div class="quote">정상 케이스의 공식보다 예외 처리 기준과 룰 충돌 시 우선순위를 먼저 정해야 로직이 흔들리지 않는다는 것을 배웠습니다.</div>
-    </article>
-
-    <article class="proj">
-      <div class="pnum">03-2</div>
-      <h3>데이터로 광고 퍼널의 원인을 찾았습니다</h3>
-      <div class="pmeta"><b>라텔앤드파트너스</b> | 2026.04 – 2026.06 | 신규 크리에이터 플랫폼 초기 이용자 모집</div>
-      <div class="prole"><span>광고 퍼널 재구성</span><span>원인 분석</span><span>개선안 작성</span></div>
-      <p style="margin-top:26px">신청 단계를 1단계 줄였는데 전환율은 <b>2.19%에서 1.50%로 하락</b>했습니다. 서로 다른 모집단을 구분한 뒤 원인을 영향도 순서로 분석했습니다.</p>
-      <ol class="num">
-        <li>상세 설명 페이지를 없애며 랜딩의 설득 기능까지 삭제</li>
-        <li>광고 목표를 전환이 아닌 트래픽으로 설정</li>
-        <li>타깃 축소로 노출 단가 상승과 반응률 하락</li>
-        <li>가입 의지와 거리가 있는 릴스 지면으로 예산 희석</li>
-      </ol>
-      <p>신청당 비용이 <b>2.5배 악화</b>된 것을 확인해 인스타그램 광고를 중단하고 남은 예산을 재편했습니다.</p>
-      <div class="quote">단계를 줄였지만, 사용자가 신청해야 할 이유도 함께 사라졌습니다.</div>
-    </article>
-
-    <article class="proj">
-      <div class="pnum">03-3</div>
-      <h3>제품을 시장에 연결하는 영업·마케팅</h3>
-      <div class="grid g2" style="margin-top:26px">
-        <div class="card pale">
-          <div class="meta">Cre8orClub | 2026.04 – 2026.06</div>
-          <p>초기 크리에이터 모집을 위해 인스타그램·X·스레드 채널을 세팅하고 콘텐츠와 광고를 직접 운영했습니다. 클로즈 베타에서 초대코드 53명에게 77개를 발송하고 같은 기간 신규 가입자 34명을 추적했으며, 갤러리 기획 오너로 정책·TC·QA를 병행해 제품이 보여주는 가치와 마케팅 메시지를 맞췄습니다.</p>
-        </div>
-        <div class="card pale">
-          <div class="meta">텍스토리주식회사 | 2025 – 2026</div>
-          <p>약 38개 회사를 대상으로 회사소개서·서비스 제안서·팸플릿·협업 제안서 등 <b>54건의 B2B 영업 자료</b>를 제작했습니다. 복잡한 기능을 고객의 문제와 기대효과 중심으로 바꿔 영업 담당자가 현장에서 설명하기 쉽게 만들었고, 공식 블로그와 인스타그램을 운영하며 보도자료를 작성·의뢰해 <b>기사 2건</b>을 송출했습니다.</p>
-        </div>
-      </div>
-      <div class="quote">영업 자료는 보기 좋게 만드는 일이 아니라 상대의 문제와 의사결정 기준에 맞춰 제품의 가치를 번역하는 일이라고 배웠습니다.</div>
-    </article>
-
-    <article class="proj">
-      <div class="pnum">03-4</div>
-      <h3>세일즈업 B2B 앱 0→1 출시</h3>
-      <div class="pmeta"><b>텍스토리주식회사</b> | 2025.06 – 2025.10 | 5개월 · 기여도 100%</div>
-      <div class="prole"><span>외부 파트너 협업</span><span>타깃·업무 분석</span><span>서비스·화면 기획</span><span>일정 관리</span><span>테스트</span></div>
-      <div class="psub">파트너의 요청을 실제 업무 흐름과 다섯 가지 핵심 기능으로 바꿨습니다</div>
-      <p>외부 파트너사의 4050 여성 사업자에게는 하위 회원, 구매 이력, 재구매 시점과 영업 일정을 한 번에 관리할 도구가 없었습니다.</p>
-      <table class="tbl">
-        <thead><tr><th>영업 과정의 문제</th><th>기획한 기능</th></tr></thead>
-        <tbody>
-          <tr><td>하위 회원 정보를 매번 확인</td><td class="b">계정 연동으로 회원 정보 자동 불러오기</td></tr>
-          <tr><td>적절한 재구매 시점을 놓침</td><td class="b">구매 기록 기반 재구매 알림</td></tr>
-          <tr><td>고객별 구매 이력이 흩어짐</td><td class="b">상품·날짜·메모·후기 통합 관리</td></tr>
-          <tr><td>상품과 계정 정보를 직접 작성해 전달</td><td class="b">선택만 하면 링크가 자동 생성되는 발송 흐름</td></tr>
-          <tr><td>미팅과 상담 일정 공유가 어려움</td><td class="b">스케줄 관리와 상위 회원 공유</td></tr>
-        </tbody>
-      </table>
-      <figure><img src="images/salesup-app.png" alt="세일즈업 B2B 앱 화면 설계"><figcaption>세일즈업 — 회원·구매 이력·재구매 알림·스케줄을 하나의 앱으로 통합</figcaption></figure>
-      <div class="quote">파트너 요구를 그대로 받아 적지 않고 실제 업무 과정을 기능과 우선순위로 재구성했습니다. Figma 화면 설계·디자인, 개발 커뮤니케이션, 일정 조율과 테스트를 총괄해 <b>5개월 만에 B2B 신규 앱을 출시</b>했습니다.</div>
-    </article>
-
-    <article class="proj">
-      <div class="pnum">03-5</div>
-      <h3>요금제·결제 정책 전면 개편</h3>
-      <div class="pmeta"><b>텍스토리주식회사</b> | 2025.05 – 2025.11 | 기여도 100%</div>
-      <div class="prole"><span>사용 데이터 분석</span><span>요금제·결제 정책 수립</span><span>화면 설계</span><span>일정 관리</span><span>테스트</span></div>
-      <div class="psub">계정을 단속하는 대신, 어뷰징이 성립할 수 없는 구조를 만들었습니다</div>
-      <p>결제일을 악용해 한 달 요금으로 두 달치 문자를 보내는 어뷰징이 반복됐습니다. 기존 요금 구조는 고객이 이해하기 어려웠고, 결제사 변경으로 전 고객이 정기결제를 다시 등록해야 하는 이탈 위험도 있었습니다.</p>
-      <figure><img src="images/textory-pricing.png" alt="요금제 개편 화면"><figcaption>요금 구간·부가서비스 구조와 정기결제 재등록 플로우를 함께 설계</figcaption></figure>
-      <ul class="dot">
-        <li>결제일 분포와 전후 사용량을 분석해 전 고객의 정기결제일을 <b>매월 1일</b>로 통일했습니다.</li>
-        <li>고객별 연락처·스토리 사용량을 요금 구간으로 바꾸고, 필요한 용량과 기능을 추가 구매하는 부가서비스 구조를 설계했습니다.</li>
-        <li>정기결제 재등록 플로우와 고객 반발을 낮추기 위한 <b>첫 달 100원 프로모션</b>을 함께 기획했습니다.</li>
-        <li>요금제·결제 화면을 설계하고 예외 조건을 포함한 <b>72건 이상의 결제 케이스</b>를 직접 검증했습니다.</li>
+        <li><b>사용량별 구간과 추가 구매:</b> 고객별 사용량 자료를 분석해 이용 한도를 정했습니다. 한도를 조금 넘는 고객은 필요한 양만 추가 구매할 수 있도록 설계했습니다.</li>
+        <li><b>결제 기준과 고객 전환:</b> 결제일 악용을 줄이기 위해 정기결제일을 매월 1일로 통일했습니다. 결제사 변경에 맞춰 재등록 절차와 첫 달 100원 프로모션도 기획했습니다.</li>
+        <li><b>예외 검토와 검증:</b> 가입일·월간 및 연간 결제·요금제 변경일이 맞물리는 상황을 가정해 빠진 조건을 찾고 결제 케이스 72건 이상을 직접 테스트했습니다.</li>
       </ul>
       <div class="result">
-        <div><div class="v">구조 전환</div><div class="k">결제일 어뷰징이 발생하기 어려운 구조</div></div>
         <div><div class="v">15%</div><div class="k">전체 고객의 상위 요금제 이동</div></div>
-        <div><div class="v">12건</div><div class="k">신규 부가서비스로 기업고객 유치</div></div>
+        <div><div class="v">12건</div><div class="k">신규 부가서비스 기업고객 유치</div></div>
+        <div><div class="v">72건 이상</div><div class="k">직접 테스트한 결제 케이스</div></div>
       </div>
-      <div class="quote">어뷰징 계정을 매번 찾는 대신 결제일을 통일해 같은 방식의 어뷰징이 반복되지 않게 했습니다.</div>
+      <p class="scope">저는 정책·화면 설계와 일정·테스트를 맡았고 내부 개발팀이 구현했습니다. 운영비 절감은 개편 목표이며 실제 절감액은 확인하지 않았습니다.</p>
+      <div class="quote">이용 한도를 조금 넘는 고객에게는 상위 요금제 변경 외의 선택지가 필요했습니다.<br>
+<b>상위 요금제를 선택할 이유와 현재 요금제를 유지하며 필요한 양만 늘릴 선택지를 함께 설계했습니다.</b></div>
     </article>
 
-    <article class="proj">
-      <div class="pnum">03-6</div>
-      <h3>낯선 도메인을 서비스로 구조화</h3>
-      <div class="pmeta"><b>텍스토리주식회사</b> | 2025.02 – 2025.06</div>
-
-      <div class="psub">배차관리 솔루션 고도화</div>
-      <figure><img src="images/dispatch-management.png" alt="배차관리 솔루션 화면"><figcaption>예약 → 배차 → 운행 → 정산으로 재구성한 운영 흐름</figcaption></figure>
-      <p>고객사 미팅과 반복 피드백을 통해 운행 이후 정산이 가장 큰 병목임을 확인했습니다. 예약과 배차 중심이던 서비스를 <b>예약 → 배차 → 운행 → 정산</b>으로 재구성하고 실비·영수증·기사 급여·차량 손익을 하나의 흐름으로 연결했으며, 운행 전 알림과 기사 준비 확인으로 지각·불참 같은 운영 리스크도 시스템이 미리 잡도록 설계했습니다.</p>
-
-      <div class="psub">랜드사 호텔 블록관리 시스템</div>
-      <figure><img src="images/hotel-block-management.png" alt="호텔 블록관리 시스템 화면"><figcaption>캘린더 기반 블록 현황과 예약 신청·승인, 권한 관리</figcaption></figure>
-      <p>랜드사가 호텔 블록을 엑셀과 수기로 관리하다 중복 예약으로 손실이 발생하는 문제에서 시작했습니다. 낯선 관광 B2B 용어와 업무 규칙을 빠르게 학습해 캘린더 기반 블록 현황과 예약 신청·승인, 권한 관리로 이어지는 웹 서비스로 구현하고, 보유 블록을 넘는 예약은 추가 요청 건으로 자동 전환되도록 했습니다.</p>
-
-      <div class="psub">회원가입 퍼널 재설계</div>
-      <figure><img src="images/textory-login.png" alt="텍스토리 로그인·회원가입 화면"><figcaption>소셜 로그인·본인확인·필수 입력을 하나의 온보딩 흐름으로 연결</figcaption></figure>
-      <p>기존 가입은 이메일 인증 중심이라 아이디·비밀번호를 새로 만들고 여러 정보를 반복 입력해야 했습니다. 단계를 무조건 줄이기보다 소셜 로그인과 휴대폰 본인확인의 역할을 구분하고, 로그인·본인확인·필수 입력을 하나의 온보딩 흐름으로 연결했습니다. 퍼널 분석부터 화면 설계, 외부 연동 기획과 테스트까지 전 과정을 담당했습니다.</p>
-
-      <div class="quote">고객 환경과 운영 과제를 분석하면 제품이 다음에 가야 할 방향이 보인다는 것을 경험했습니다.</div>
+    <article class="proj" id="salesup">
+      <div class="pnum">PROJECT 02</div>
+      <h3>세일즈업 앱 신규 런칭 PM</h3>
+      <div class="pmeta"><b>텍스토리</b> | 2025.06 ~ 2025.10</div>
+      <div class="prole"><span>파트너 요구사항 조율</span><span>기능·화면 기획</span><span>개발 협업</span><span>일정 관리·테스트</span></div>
+      <p class="intro">세일즈업은 판매 사업자가 회원정보·구매기록·재구매 연락·일정을 관리하는 앱입니다. 실사용자를 대변하는 외부 파트너의 요청이 많고 정리되지 않은 상황에서 실제로 일하는 순서를 먼저 파악했습니다.</p>
+      <table class="tbl">
+        <thead><tr><th>사용자가 해야 하는 일</th><th>기획한 기능과 연결</th></tr></thead>
+        <tbody>
+          <tr><td>관리할 회원과 구매 내용 확인</td><td class="b">계정 연동으로 회원정보 불러오기·회원별 구매기록 관리</td></tr>
+          <tr><td>다시 연락할 시점과 안내 상품 확인</td><td class="b">상품별 재구매 알림·상품 링크 문자 발송</td></tr>
+          <tr><td>상담·미팅 준비와 일정 공유</td><td class="b">일정 관리·상위 회원과 공유</td></tr>
+        </tbody>
+      </table>
+      <div class="psub">요청에 없던 실적·수당 조회를 홈 화면에 제안했습니다</div>
+      <p>사업자가 자주 확인하는 실적·수당을 맨 위에 두고 오늘의 일정과 재구매 알림을 이어 배치했습니다. 파트너·개발팀과 기능과 우선순위를 조율하고 Figma 화면 설계부터 일정 관리·테스트·출시까지 맡았습니다.</p>
+      <figure><img src="images/salesup-home.png" alt="실적·수당, 오늘의 일정, 재구매 알림 순으로 구성한 홈 화면의 정보 배치 도식" width="1200" height="410"><figcaption>기획한 홈 화면의 정보 배치 순서를 재구성한 도식. 실제 앱 화면은 아닙니다.</figcaption></figure>
+      <div class="mini-result">기획부터 출시까지 5개월 · 실적·수당 조회에 대한 긍정적인 반응을 확인해 후속 블로그·광고 팸플릿에도 반영</div>
+      <p class="scope">저는 요구사항·기능·화면과 일정·테스트를 맡았고 내부 개발팀이 구현했습니다.</p>
+      <div class="quote">자주 확인하는 실적·수당과 다음에 할 영업 업무를 함께 볼 수 있는 홈 화면이 필요했습니다.<br>
+<b>실적 확인에서 일정 확인과 재구매 연락으로 이어지도록 홈 화면을 구성했습니다.</b><br>
+상품이 주로 생필품이라는 점을 고려해 다시 연락할 시점도 상품별로 설정하도록 했습니다.</div>
     </article>
 
-    <article class="proj">
-      <div class="pnum">03-7</div>
-      <h3>시장의 질문에서 시작한 앱 개발 프로젝트</h3>
-      <div class="pmeta"><b>창업동아리 ONLY</b> | 2022.07 – 2024.06</div>
+    <article class="proj" id="solutions">
+      <div class="pnum">PROJECT 03</div>
+      <h3>업종별 업무 솔루션</h3>
+      <div class="pmeta"><b>텍스토리</b> | 고객사 미팅·업무 규칙 정리·기능 및 화면 설계</div>
+      <div class="subproject" id="dispatch">
+        <h4>배차·정산관리 솔루션 고도화</h4>
+        <div class="pmeta">2025.04 ~ 2025.06 · 전세버스 운수사 대상</div>
+        <p>예약·배차 서비스에 불편하다는 피드백이 반복됐습니다. 고객사 미팅에서 운행 후 정산을 수기·엑셀로 따로 처리한다는 점을 확인했습니다.</p>
+        <figure><img src="images/dispatch-management.png" alt="전세버스 예약 목록, 차량과 기사 배정 및 배차 현황을 설계한 화면" width="1531" height="800" loading="lazy"><figcaption>예약 목록과 차량·기사 배정 화면 시안. 운행 후 정산도 연결하도록 기획 범위를 확장했습니다.</figcaption></figure>
+        <p>피드백을 화면·기능별로 정리해 개선 순서를 정했습니다. 운행 기록에 실비·영수증과 운행별 정산을 연결하고 월별 기사 급여·차량 손익을 확인하는 흐름과 화면을 설계했습니다.</p>
+        <div class="quote">화면 개선과 함께 엑셀로 따로 처리하던 정산 업무도 서비스에 연결해야 했습니다.<br>
+<b>예약·배차에서 끝나던 관리 범위를 운행 비용과 정산까지 이어지도록 넓혔습니다.</b></div>
+      </div>
+      <div class="subproject" id="hotel">
+        <h4>호텔 객실 물량 관리 시스템 기획</h4>
+        <div class="pmeta">2025.02 ~ 2025.04 · 현지 관광 수배업체 대상</div>
+        <p>관광업체가 미리 확보한 호텔 객실 물량을 ‘호텔 블록’이라고 합니다. 엑셀과 수기로 관리해 중복 예약으로 손실이 발생하던 상황에서 객실 확보와 예약 업무의 규칙부터 익혔습니다.</p>
+        <figure><img src="images/hotel-block-management.png" alt="호텔별 확보 객실과 예약 현황을 캘린더에서 확인하는 호텔 객실 관리 화면" width="2660" height="1080" loading="lazy"><figcaption>확보한 객실과 예약 현황을 함께 확인하는 캘린더 기반 관리 화면 시안</figcaption></figure>
+        <p>캘린더에서 남은 객실을 확인하고 예약을 신청·승인하는 흐름을 설계했습니다. 확보한 객실이 부족하면 추가 요청으로 넘어가는 조건과 자동 이메일 보고도 기획했습니다.</p>
+        <div class="quote">중복 배정을 줄이기 위해 예약 전에 남은 객실을 확인하는 절차가 필요했습니다.<br>
+<b>객실 현황 조회와 예약 처리를 같은 흐름에 두고 확보 물량을 넘는 신청은 추가 요청으로 구분했습니다.</b></div>
+      </div>
+      <p class="scope">두 프로젝트 모두 업무 규칙·기능·화면 설계가 담당 범위입니다. 도입 후 정산시간이나 중복 예약 감소율은 측정하지 않았습니다.</p>
+    </article>
+
+    <article class="proj" id="ratel">
+      <div class="pnum">PROJECT 04</div>
+      <h3>Cre8orClub 서비스 기획</h3>
+      <div class="pmeta"><b>라텔앤드파트너즈</b> | 2026.04 ~ 2026.06 · 크리에이터 작품 공유 플랫폼</div>
+      <div class="screen-pair">
+        <div>
+          <div id="gallery"><h4>갤러리 메뉴 신설</h4>
+            <p>여러 콘텐츠가 빠르게 지나가는 피드에서는 한 작품에 집중하기 어려웠습니다. 한 화면에 한 작품을 보여주는 갤러리를 제안했습니다.</p>
+            <p>화면·정책·테스트 항목을 작성하고 디자인 요청과 운영 준비를 맡았습니다. 메뉴마다 달랐던 좋아요·북마크는 공통 반응 체계로 정리했습니다.</p>
+            <div class="mini-result">테스트 이슈 10건 대응 · 담당 메뉴를 개발·운영 단계로 인계</div>
+            <div class="quote">작품을 크게 보여주는 것과 한 작품에 집중할 감상 환경을 만드는 것은 다른 문제였습니다.<br>
+<b>한 화면에 한 작품을 두는 감상 공간을 제안했습니다.</b></div>
+          </div>
+        </div>
+        <figure><img src="images/c8-content-screen.png" alt="Cre8orClub의 크리에이터 소개 콘텐츠 화면 시안" width="375" height="901" loading="lazy"><figcaption>서비스 이해를 위한 기존 콘텐츠 화면 시안. 갤러리 최종 화면은 아닙니다.</figcaption></figure>
+      </div>
+      <div class="subproject" id="feed">
+        <h4>홈 피드 콘텐츠 노출 기준 설계</h4>
+        <p>초기에는 사용자 행동 데이터와 콘텐츠가 적었습니다. 팀과 함께 초기 운영에 쓸 기준과 데이터가 쌓인 뒤의 기준을 나누고 노출 기준의 충돌·콘텐츠 부족 등 예외 조건을 개발 명세로 정리했습니다.</p>
+        <div class="quote">데이터와 작품이 적은 초기 상황을 고려해 피드가 비거나 같은 작품이 반복되는 경우를 검토했습니다.<br>
+<b>정상적인 정렬 기준과 함께 콘텐츠가 부족하거나 기준이 충돌할 때의 처리 방법도 정했습니다.</b></div>
+      </div>
+      <div class="subproject" id="acquisition">
+        <h4>초기 크리에이터 모집·광고 분석</h4>
+        <p>초대코드가 있어야 가입할 수 있는 서비스에서 SNS 콘텐츠와 광고로 참여자를 모집했습니다. 두 차례 광고를 비교하니 코드 수신자 1명당 광고비가 약 19,095원에서 약 44,377원으로 늘었습니다.</p>
+        <p>광고를 중단하고 지인·사내 네트워크 중심으로 모집을 전환했습니다. 이후 팀은 초대코드 없이 가입할 수 있도록 정책을 변경해 서비스에 반영했습니다.</p>
+        <div class="mini-result">초대코드 53명에게 77개 발송 · 같은 기간 앱 신규 가입자 34명 기록</div>
+        <div class="quote">초기 작품과 사용자를 확보해야 하는데 같은 방식의 모집 비용이 커지고 있었습니다.<br>
+<b>코드를 보내기까지 든 비용을 비교해 광고를 계속 집행할지 판단하고 모집 경로를 바꿨습니다.</b></div>
+      </div>
+      <div class="subproject" id="ratel-other">
+        <h4>로그인·회원가입 진입 흐름 정리</h4>
+        <p>각 화면으로 들어가는 경로를 정리하고 디자인 요청·테스트를 수행했습니다.</p>
+        <div class="quote"><b>서비스 이용을 시작하는 로그인·회원가입 경로를 구체화하고 화면과 테스트 항목으로 정리했습니다.</b></div>
+      </div>
+    </article>
+
+    <article class="proj" id="other">
+      <div class="pnum">PROJECT 05</div>
+      <h3>그 밖의 서비스 개선·고객 커뮤니케이션</h3>
+      <div class="pmeta"><b>텍스토리</b></div>
+      <div class="subproject" id="signup">
+        <h4>회원가입 개선</h4>
+        <div class="pmeta">2025.03 ~ 2025.04</div>
+        <p>이메일 인증 중심의 가입 과정에서 사용자가 입력하고 본인확인하는 절차를 검토했습니다. 카카오·구글 로그인과 휴대폰 본인확인 도입을 기획하고 가입 단계를 재구성했습니다.</p>
+        <figure><img src="images/textory-signup.png" alt="텍스토리의 로그인 수단 선택과 회원가입 정보 입력 화면 설계" width="1240" height="800" loading="lazy"><figcaption>로그인·회원가입 설계 화면. 소셜 로그인과 휴대폰 본인확인 도입 기획을 담당했습니다.</figcaption></figure>
+        <div class="quote"><b>가입을 시작하는 사용자의 관점에서 입력과 본인확인 과정을 살피고 소셜 로그인 도입과 단계 재구성으로 절차를 간소화했습니다.</b></div>
+      </div>
+      <div class="subproject" id="communication">
+        <h4>영업·고객 안내 자료 제작</h4>
+        <p>약 38개 회사·고객을 대상으로 제안서·회사소개서·팸플릿 등 영업 자료 54건을 만들었습니다. 기존·신규 서비스 사용법을 블로그와 도움말 홈페이지에 소개하고 보도자료 작성·송출 의뢰로 기사 2건을 송출했습니다.</p>
+        <div class="quote">고객이 도입을 판단할 때와 실제로 사용을 시작할 때 필요한 설명은 다릅니다.<br>
+<b>영업 자료는 고객의 문제와 기대효과를 중심으로 구성하고 이용 안내는 기능과 사용 절차를 따라갈 수 있도록 작성했습니다.</b></div>
+      </div>
+      <p class="scope">그 밖의 수행: 텍스토리 전체 사용자 화면 재설계·디자인 개선(2025.11 ~ 2026.02).</p>
+    </article>
+
+    <article class="proj" id="startup">
+      <div class="pnum">PROJECT 06</div>
+      <h3>창업동아리 ONLY</h3>
+      <div class="pmeta"><b>팀 대표</b> | 2022.07 ~ 2024.06 · 개발자 5명을 포함한 총 8명의 팀 구성·운영</div>
       <div class="grid g2" style="margin-top:26px">
-        <div class="card">
-          <div class="meta">픽카이브 | 2024.01 – 2024.06</div>
-          <h4>잠재고객 35명 대면 인터뷰로 사업성 검증</h4>
-          <p>어린이집·유치원의 사진 공유가 불편할 것이라는 가설을 검증하기 위해 관계자와 잠재고객 <b>35명을 직접 만났습니다</b>. 랜딩페이지로 관심도를 확인하고 지역 기관에 직접 전화해 초기 영업 접점을 만들었으며, 확인한 내용을 바탕으로 앱과 사업계획서를 설계하고 IR 피칭까지 진행해 <b>Site 미니 아이코어 최우수상</b>을 수상하고 예비창업패키지 서류를 통과했습니다.</p>
+        <div class="card" id="homey">
+          <div class="meta">주거 안전등급 앱</div>
+          <h4>homey 앱 기획·출시</h4>
+          <p>여성 1인 가구가 집을 구할 때 주변의 위험과 방범시설을 객관적으로 확인하기 어렵다는 문제에서 출발했습니다. 공공데이터와 매물별 방범시설 정보를 결합해 평가 항목과 가중치를 설계했습니다.</p>
+          <p>개발자 5명을 직접 섭외하고 서비스·화면 기획과 개발 일정·배포를 관리했습니다.</p>
+          <div class="mini-result">2023년 10월 앱 출시<br>미래내일 지원금 2,260만 원 집행·증빙·결과보고</div>
+          <div class="quote">집을 고를 때 안전을 비교할 객관적인 정보가 필요했습니다.<br>
+<b>지역의 공공데이터와 개별 매물의 방범시설을 함께 살펴 비교할 수 있도록 기획했습니다.</b></div>
         </div>
-        <div class="card">
-          <div class="meta">homey | 2022.07 – 2024.06</div>
-          <h4>개발자 5명을 모아 실제 앱 출시</h4>
-          <p>여성 1인 가구가 집을 구할 때 범죄 위험과 주변 환경을 객관적으로 확인하기 어렵다는 문제에서 출발했습니다. 대학 커뮤니티에 아이디어를 올리고 개인 미팅을 거쳐 <b>개발자 5명을 직접 섭외</b>했고, 사용자 플로우와 단계별 개발 계획을 세워 기획·디자인·개발·배포 전 과정을 리드해 실제 앱을 출시했습니다. <b>2,260만 원 규모 지원금</b>의 계약서·세금계산서·결과보고 등 증빙도 단독으로 관리했습니다.</p>
+        <div class="card" id="pickive">
+          <div class="meta">유아교육기관 사진공유 서비스</div>
+          <h4>픽카이브 고객 검증·서비스 기획</h4>
+          <p>어린이집·유치원의 사진 공유에 불편이 있을 것이라는 가설로 시작했습니다. 기관에 전화해도 인터뷰가 성사되지 않아 지인 소개로 접근 경로를 바꿨습니다.</p>
+          <p>원장·교사·학부모 35명을 대면 인터뷰하고 랜딩페이지로 관심도를 확인했습니다. 확인한 요구를 서비스 기획과 사업계획서에 반영했습니다.</p>
+          <div class="mini-result">Site 미니 아이코어 최우수상<br>예비창업패키지 서류 통과·발표심사</div>
+          <div class="quote">사진 공유가 불편할 것이라는 가설을 확인하기 위해 실제 사용자의 경험부터 조사했습니다.<br>
+<b>사진을 공유하는 교사와 받는 학부모 등 각 사용자의 이야기를 듣고 요구를 기획에 반영했습니다.</b></div>
         </div>
       </div>
-      <div class="quote">방법이 없는 곳에서 스스로 길을 만들고 자원과 사람을 모아 답을 찾아간 경험입니다.</div>
+      <div class="mini-result">미래내일 일경험 사업: 기획 2개월·실행 5개월, 최종 우수사례팀 선정<br>2023·2024년 예비창업패키지 서류 통과 후 발표심사 경험</div>
+      <p class="scope">homey는 ONLY에서 기획하고 미래내일 일경험 사업에서도 실행한 동일 프로젝트입니다.</p>
     </article>
-
   </div>
 </section>
 
-<section id="skills" class="alt">
+<section id="how">
   <div class="wrap">
-    <div class="chapter">04 &nbsp; SKILLS &amp; TOOLS</div>
+    <div class="chapter">03 &nbsp; HOW TO WORK</div>
+    <h2>요청한 이유를 이해하고 결정의 근거를 공유합니다</h2>
+    <div class="grid g3" style="margin-top:28px">
+      <div class="card"><div class="meta">고객 이해</div><h3>실제 업무부터 봅니다</h3><p>고객·파트너의 이야기를 듣고 어떤 순서로 일하며 어디서 불편을 겪는지 파악합니다.</p></div>
+      <div class="card"><div class="meta">판단 공유</div><h3>왜 그렇게 정했는지 설명합니다</h3><p>기능과 우선순위를 정한 이유, 검토 과정과 결정 이력을 동료에게 전달합니다.</p></div>
+      <div class="card"><div class="meta">구체화·검증</div><h3>화면과 예외 조건까지 확인합니다</h3><p>정책을 여러 사용자 상황에 적용하고 개발팀과 화면·일정을 협의하며 직접 테스트합니다.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="ai" class="alt">
+  <div class="wrap">
+    <div class="chapter">04 &nbsp; AI IN PRACTICE</div>
+    <h2>AI를 분석·검토·반복 업무에 활용합니다</h2>
+    <div class="ai-layout">
+      <div>
+        <ul class="dot" style="margin-top:0">
+          <li><b>요금제 분석:</b> 개발자가 제공한 사용량 CSV를 Claude로 분석해 구간안을 검토하고 실제 고객의 사용량과 대조했습니다.</li>
+          <li><b>개인경비 신청:</b> 영수증 사진으로 신청서와 증빙 묶음을 생성하도록 자동화했습니다. 생성된 내용과 증빙은 직접 확인했습니다.</li>
+          <li><b>동료 활용 지원:</b> 업무 자료와 작성 지침을 정리하고 동료도 적용할 수 있도록 설정 가이드를 공유했습니다.</li>
+        </ul>
+        <div class="quote">반복되는 자료 정리와 문서 작성의 부담을 줄이기 위해 AI를 활용했습니다.<br>
+<b>업무 자료와 기준을 함께 제공하고 나온 결과가 실제 조건에 맞는지 꼼꼼히 확인합니다.</b></div>
+      </div>
+      <figure><img src="images/ai-setting-guide.png" alt="동료에게 공유한 AI 업무환경 설정 가이드 일부" width="1670" height="1972" loading="lazy"><figcaption>동료 공유용 설정 가이드 일부</figcaption></figure>
+    </div>
+  </div>
+</section>
+<section id="skills">
+  <div class="wrap">
+    <div class="chapter">05 &nbsp; SKILLS · AWARDS · EDUCATION</div>
+    <p class="career-note" style="margin-bottom:30px">경희대학교 유전생명공학과 졸업 · 2018.03 ~ 2024.02</p>
     <dl>
       <div class="skill"><dt>RESEARCH</dt><dd>
         <span>시장·고객 리서치</span><span>대면 인터뷰</span><span>랜딩페이지 검증</span><span>퍼널·사용 데이터 분석</span></dd></div>
       <div class="skill"><dt>PRODUCT</dt><dd>
-        <span>요구사항 정의</span><span>사용자 플로우</span><span>화면 설계</span><span>정책·우선순위·엣지케이스 명세</span></dd></div>
+        <span>요구사항 정의</span><span>사용자 플로우</span><span>화면 설계</span><span>정책·우선순위·예외 조건 정의</span></dd></div>
       <div class="skill"><dt>BUSINESS</dt><dd>
-        <span>BM·요금제·가격·패키징</span><span>사업계획서</span><span>IR</span><span>Sales Kit·제안서</span></dd></div>
+        <span>수익모델·요금제·가격 설계</span><span>사업계획서</span><span>IR</span><span>영업 자료·제안서</span></dd></div>
       <div class="skill"><dt>EXECUTION</dt><dd>
-        <span>일정 관리</span><span>외부 파트너·개발 협업</span><span>TC·QA</span><span>운영 세팅</span><span>초기 사용자 유입</span></dd></div>
+        <span>일정 관리</span><span>외부 파트너·개발 협업</span><span>테스트 항목 작성·품질 검증</span><span>운영 세팅</span><span>초기 사용자 유입</span></dd></div>
       <div class="skill"><dt>AI &amp; AUTOMATION</dt><dd>
-        <span>업무 지식 구조화</span><span>작업 지침 관리</span><span>반복 문서 자동화</span><span>사람 검토 기준 설계</span></dd></div>
+        <span>업무 지식 구조화</span><span>작업 지침 관리</span><span>반복 문서 자동화</span><span>생성 결과 확인</span></dd></div>
       <div class="skill"><dt>TOOLS</dt><dd>
         <span>Figma</span><span>PowerPoint</span><span>Excel</span><span>Word</span><span>Notion</span><span>Obsidian</span><span>Confluence</span><span>Jira</span><span>GitHub</span><span>Slack</span></dd></div>
     </dl>
@@ -488,7 +554,7 @@ footer{background:var(--white);padding:34px 0;border-top:1px solid var(--line)}
       </tbody>
     </table>
 
-    <div class="psub" style="margin-top:52px">Education <em style="font-style:normal;color:var(--blue);font-size:14px;margin-left:8px">교육이수 13건</em></div>
+    <details class="education-details"><summary>교육이수 13건 보기</summary><div>
     <table class="tbl">
       <thead><tr><th>기간</th><th>과정명</th><th>교육기관</th></tr></thead>
       <tbody>
@@ -507,25 +573,21 @@ footer{background:var(--white);padding:34px 0;border-top:1px solid var(--line)}
         <tr><td>2023.06</td><td class="b">사회적기업 재정지원사업 필수과정</td><td>한국사회적기업진흥원</td></tr>
       </tbody>
     </table>
+    </div></details>
   </div>
 </section>
-
 <section id="closing">
   <div class="wrap">
-    <h2>문제를 발견하는 데서 멈추지 않고,<br>기준을 세우고 실행해 서비스가 움직이게 합니다.</h2>
-    <p class="lead">제품 기획의 시작은 화면이 아니라 질문이라고 생각합니다.</p>
+    <div class="chapter">THANK YOU</div>
+    <h2>고객과 니즈를 철저히 분석하고<br>일상에 녹아드는 서비스로 기획하겠습니다</h2>
+    <p class="lead">서비스 기획의 시작은 화면이 아니라 질문이라고 생각합니다.</p>
     <div class="big">왜 이 제품이 필요한가. 어떤 고객 문제를 풀어야 하는가.</div>
     <p class="lead">저는 본질을 찾아가는 질문을 던지고, 시장과 데이터로 답을 만들고, 정책과 자료로 완성합니다.</p>
+    <div class="contact">서비스 기획자 이조은 · <a href="mailto:jony93@naver.com">jony93@naver.com</a></div>
   </div>
 </section>
-
-<footer>
-  <div class="foot-in">
-    <div>이조은 · 서비스·사업 기획 포트폴리오</div>
-    <div>v1.0</div>
-  </div>
-</footer>
-
+</main>
+<footer><div class="foot-in"><div>이조은 · 서비스·플랫폼 기획 포트폴리오</div><div>2026.11 · v1.1</div></div></footer>
 <script>
 (function(){
   var bar=document.getElementById('bar');
@@ -535,14 +597,11 @@ footer{background:var(--white);padding:34px 0;border-top:1px solid var(--line)}
     var h=document.documentElement.scrollHeight-window.innerHeight;
     bar.style.width=(h>0?(window.scrollY/h)*100:0)+'%';
     var i=-1;
-    for(var k=0;k<secs.length;k++){
-      if(secs[k]&&secs[k].getBoundingClientRect().top<=120) i=k;
-    }
-    links.forEach(function(a,k){a.classList.toggle('on',k===i);});
+    for(var k=0;k<secs.length;k++) if(secs[k]&&secs[k].getBoundingClientRect().top<=120) i=k;
+    links.forEach(function(a,k){a.classList.toggle('on',k===i);if(k===i)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current');});
   }
   window.addEventListener('scroll',onScroll,{passive:true});
-  window.addEventListener('resize',onScroll);
-  onScroll();
+  window.addEventListener('resize',onScroll);onScroll();
 })();
 </script>
 </body>
