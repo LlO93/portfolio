@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="410" viewBox="0 0 1200 410">
+<rect width="1200" height="410" rx="24" fill="#f3f6fb"/>
+<g font-family="Apple SD Gothic Neo, Noto Sans KR, sans-serif" fill="#182c48">
+<text x="44" y="58" font-size="28" font-weight="700">호텔 객실 관리: 확보한 객실과 예약 현황 확인</text>
+<text x="44" y="93" font-size="16" fill="#60728b">업무·정보 구조 설명용 재구성</text>
+<rect x="48.0" y="130" width="349.3333333333333" height="190" rx="14" fill="white" stroke="#d3dfef"/>
+<text x="68.0" y="164" font-size="15" fill="#3975d9">01</text>
+<text x="68.0" y="204" font-size="22" font-weight="700">객실 현황</text>
+<text x="68.0" y="244" font-size="17" fill="#51647e">확보한 객실</text>
+<text x="68.0" y="273" font-size="17" fill="#51647e">캘린더로 확인</text>
+<path d="M 402.3333333333333 220 h 16 l -5 -5 m 5 5 l -5 5" fill="none" stroke="#7390b5" stroke-width="2"/>
+<rect x="425.3333333333333" y="130" width="349.3333333333333" height="190" rx="14" fill="white" stroke="#d3dfef"/>
+<text x="445.3333333333333" y="164" font-size="15" fill="#3975d9">02</text>
+<text x="445.3333333333333" y="204" font-size="22" font-weight="700">예약 신청·승인</text>
+<text x="445.3333333333333" y="244" font-size="17" fill="#51647e">예약 요청 처리</text>
+<text x="445.3333333333333" y="273" font-size="17" fill="#51647e">객실 물량과 연결</text>
+<path d="M 779.6666666666666 220 h 16 l -5 -5 m 5 5 l -5 5" fill="none" stroke="#7390b5" stroke-width="2"/>
+<rect x="802.6666666666666" y="130" width="349.3333333333333" height="190" rx="14" fill="white" stroke="#d3dfef"/>
+<text x="822.6666666666666" y="164" font-size="15" fill="#3975d9">03</text>
+<text x="822.6666666666666" y="204" font-size="22" font-weight="700">객실 추가 요청</text>
+<text x="822.6666666666666" y="244" font-size="17" fill="#51647e">객실 부족 시 요청</text>
+<text x="822.6666666666666" y="273" font-size="17" fill="#51647e">이메일 자동 보고</text>
+<text x="44" y="370" font-size="16" fill="#60728b">기획한 업무 흐름을 재구성한 도식입니다.</text></g></svg>

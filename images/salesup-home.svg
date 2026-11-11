@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="410" viewBox="0 0 1200 410">
+<rect width="1200" height="410" rx="24" fill="#f3f6fb"/>
+<g font-family="Apple SD Gothic Neo, Noto Sans KR, sans-serif" fill="#182c48">
+<text x="44" y="58" font-size="28" font-weight="700">세일즈업 홈: 실적 확인 후 오늘의 업무 확인</text>
+<text x="44" y="93" font-size="16" fill="#60728b">업무·정보 구조 설명용 재구성</text>
+<rect x="48.0" y="130" width="349.3333333333333" height="190" rx="14" fill="white" stroke="#d3dfef"/>
+<text x="68.0" y="164" font-size="15" fill="#3975d9">01</text>
+<text x="68.0" y="204" font-size="22" font-weight="700">실적·수당</text>
+<text x="68.0" y="244" font-size="17" fill="#51647e">자주 확인하는 정보</text>
+<text x="68.0" y="273" font-size="17" fill="#51647e">홈 상단에 배치</text>
+<path d="M 402.3333333333333 220 h 16 l -5 -5 m 5 5 l -5 5" fill="none" stroke="#7390b5" stroke-width="2"/>
+<rect x="425.3333333333333" y="130" width="349.3333333333333" height="190" rx="14" fill="white" stroke="#d3dfef"/>
+<text x="445.3333333333333" y="164" font-size="15" fill="#3975d9">02</text>
+<text x="445.3333333333333" y="204" font-size="22" font-weight="700">오늘의 일정</text>
+<text x="445.3333333333333" y="244" font-size="17" fill="#51647e">예정된 상담·미팅</text>
+<text x="445.3333333333333" y="273" font-size="17" fill="#51647e">오늘 업무 확인</text>
+<path d="M 779.6666666666666 220 h 16 l -5 -5 m 5 5 l -5 5" fill="none" stroke="#7390b5" stroke-width="2"/>
+<rect x="802.6666666666666" y="130" width="349.3333333333333" height="190" rx="14" fill="white" stroke="#d3dfef"/>
+<text x="822.6666666666666" y="164" font-size="15" fill="#3975d9">03</text>
+<text x="822.6666666666666" y="204" font-size="22" font-weight="700">재구매 알림</text>
+<text x="822.6666666666666" y="244" font-size="17" fill="#51647e">다시 연락할 회원</text>
+<text x="822.6666666666666" y="273" font-size="17" fill="#51647e">상품과 연락 시점</text>
+<text x="44" y="370" font-size="16" fill="#60728b">홈 화면에 정보를 배치한 순서를 재구성한 도식입니다.</text></g></svg>
